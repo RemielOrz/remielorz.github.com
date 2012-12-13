@@ -1,8 +1,22 @@
 <html>
 <head>
 	<title>remiel</title>
+	<link rel="stylesheet/less" type="text/css" href="style/eTask.less">
+	<script type="text/javascript" src="js/less-1.3.0.min.js"></script>
+	<style type="text/css">
+		.msSwitch{min-width:40px}
+	</style>
 </head>
 <body>
 <h1>hello</h1>
+<p>rs 菊苣 <i class="msSwitch on">尼嚎</i></p>
+	<script type="text/javascript" src="js/jquery-1.7.min.js"></script>
+<script type="text/javascript">
+	$('.msSwitch').toggle(function(){
+		$(this).removeClass("on").addClass("off").html("再见")
+	},function(){
+		$(this).removeClass("off").addClass("on").html("尼嚎")
+	})
+</script>
 </body>
 </html>
