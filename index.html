@@ -6,18 +6,82 @@
 	<link rel="stylesheet/less" type="text/css" href="style/eTask.less">
 	<script type="text/javascript" src="js/less-1.3.0.min.js"></script>
 	<style type="text/css">
-		.msSwitch{min-width:40px}
+		html, body {height: 100%; width: 100%; background: #000; position: relative;}
+		#myCanvas{left: 50%; position: absolute; top: 20px; margin-left: -550px}
 	</style>
 </head>
-<body>
-<h1>hello</h1>
-<script type="text/javascript" src="js/jquery-1.7.min.js"></script>
+<body onload="init()">
+<canvas id="myCanvas" height="618px" width="1920px"></canvas>
+<!-- <script type="text/javascript" src="js/jquery-1.7.min.js"></script> -->
+	<script src="js/jquery.js"></script>
+	<script src="js/easeljs-0.5.0.min.js"></script>
+	<script src="js/tweenjs-0.3.0.min.js"></script>
 <script type="text/javascript">
-	$('.msSwitch').toggle(function(){
-		$(this).removeClass("on").addClass("off")
-	},function(){
-		$(this).removeClass("off").addClass("on")
-	})
+        var canvas;
+        var stage;
+        var tweens;
+        var activeCount;
+        var circleCount = 25;
+        var text;
+
+        function init() {
+	       
+
+            canvas = document.getElementById("myCanvas");
+            stage = new createjs.Stage(canvas);
+            tweens = [];
+            stage.enableMouseOver(10);
+			createjs.Touch.enable(stage);
+
+            for (var i=0; i<circleCount; i++) {
+                // draw the circle, and put it on stage:
+                var circle = new createjs.Shape();
+                circle.graphics.setStrokeStyle(15);
+                circle.graphics.beginStroke("#113355");
+                circle.graphics.drawCircle(0,0,(i+1)*4);
+                circle.alpha = 1-i*0.02;
+                circle.x = Math.random()*550;
+                circle.y = Math.random()*400;
+                circle.compositeOperation = "lighter";
+
+                var tween = createjs.Tween.get(circle).to({x:275,y:200}, (0.5+i*0.04)*1500, createjs.Ease.bounceOut).call(tweenComplete);
+                tweens.push({tween:tween, ref:circle});
+                stage.addChild(circle);
+            }
+            activeCount = circleCount;
+            stage.onMouseUp = handleMouseUp;
+
+	        text = new createjs.Text("remiel.me", "36px Arial", "#777");
+	        text.x = 450;
+	        text.y = 200;
+	        stage.addChild(text);
+
+			createjs.Ticker.addListener(window);
+        }
+
+
+        function handleMouseUp(event) {
+	        if (text) {
+	        	stage.removeChild(text);
+	        	text = null;
+	        }
+            for (var i=0; i<circleCount; i++) {
+                var ref = tweens[i].ref;
+                var tween = tweens[i].tween;
+				createjs.Tween.get(ref,{override:true}).to({x:stage.mouseX,y:stage.mouseY}, (0.5+i*0.04)*1500, createjs.Ease.bounceOut).call(tweenComplete);
+            }
+            activeCount = circleCount;
+        }
+
+        function tweenComplete() {
+            activeCount--;
+        }
+
+        function tick() {
+            if (activeCount) { stage.update(); }
+        }
+
+
 </script>
 </body>
 </html>
