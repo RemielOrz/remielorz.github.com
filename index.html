@@ -7,11 +7,11 @@
 	<script type="text/javascript" src="js/less-1.3.0.min.js"></script>
 	<style type="text/css">
 		html, body {height: 100%; width: 100%; background: #000; position: relative;}
-		#myCanvas{left: 50%; position: absolute; top: 20px; margin-left: -550px}
+		#myCanvas{left: 50%; position: absolute; top: 20px; margin-left: -670px}
 	</style>
 </head>
 <body onload="init()">
-<canvas id="myCanvas" height="618px" width="1920px"></canvas>
+<canvas id="myCanvas" height="618px" width="1340px"></canvas>
 <!-- <script type="text/javascript" src="js/jquery-1.7.min.js"></script> -->
 	<script src="js/jquery.js"></script>
 	<script src="js/easeljs-0.5.0.min.js"></script>
@@ -61,13 +61,25 @@
 
 
         function handleMouseUp(event) {
+        	var _x;
+	        stage.mouseX > canvas.offsetWidth/2?_x = 0:_x = -180;
 	        if (text) {
-	        	stage.removeChild(text);
-	        	text = null;
+	        	//stage.removeChild(text);
+	        	//text = null;
+	        	console.log(text);
+	        	console.log(createjs.Tween.get(text,{override:true}));
 	        }
+
+	        //text = new createjs.Text("remiel.me", "36px Arial", );
+	        //text.x = stage.mouseX + 230;
+	        //text.y = stage.mouseY + 100;
+	        //stage.addChild(text);
             for (var i=0; i<circleCount; i++) {
                 var ref = tweens[i].ref;
                 var tween = tweens[i].tween;
+                text.color = Q[Math.random(0,6)];
+                text.font = Math.random(12,72)+ "px Arial";
+        		createjs.Tween.get(text,{override:true}).wait(200).to({color:Q[Math.random(0,6)],x:canvas.offsetWidth-stage.mouseX+_x,y:stage.mouseY}, (0.2+i*0.04)*1500, createjs.Ease.bounceOut);
 				createjs.Tween.get(ref,{override:true}).to({x:stage.mouseX,y:stage.mouseY}, (0.5+i*0.04)*1500, createjs.Ease.bounceOut).call(tweenComplete);
             }
             activeCount = circleCount;
@@ -82,6 +94,15 @@
         }
 
 
+		var native_random = Math.random;
+		Math.random = function(a, b, c) {
+		    if (arguments.length === 0)
+		        return native_random();
+		    arguments.length === 1 && (b = a, a = 0);
+		    var d = a + native_random() * (b - a);
+		    return c === void 0 ? Math.round(d) : d.toFixed(c)
+		}
+		Q = ["#42a8cb", "#ee823d", "#cb9bce", "#a8a9a8", "#3b8d3a", "#1e4484", "#c0000b"]
 </script>
 </body>
 </html>
