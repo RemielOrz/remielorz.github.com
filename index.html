@@ -11,11 +11,14 @@
 	</style>
 </head>
 <body onload="init()">
-<canvas id="myCanvas" height="618px" width="1340px"></canvas>
+<canvas id="myCanvas"></canvas>
 <!-- <script type="text/javascript" src="js/jquery-1.7.min.js"></script> -->
-	<script src="js/jquery.js"></script>
-	<script src="js/easeljs-0.5.0.min.js"></script>
-	<script src="js/tweenjs-0.3.0.min.js"></script>
+	<script type="text/javascript">var createjs = window;</script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/preloadjs-0.2.0.min.js"></script>
+	<script type="text/javascript" src="js/easeljs-0.5.0.min.js"></script>
+	<script type="text/javascript" src="js/tweenjs-0.3.0.min.js"></script>
+	<script type="text/javascript" src="js/soundjs-0.3.0.min.js"></script>
 <script type="text/javascript">
         var canvas;
         var stage;
@@ -25,7 +28,34 @@
         var text;
 
         function init() {
-	       
+	       $('#myCanvas').attr({'width':$('body').width()+'px','height':$('body').height()})
+
+			// begin loading content (only sounds to load)
+			var manifest = [
+				{id:"music", src:"http://f3.xiami.net/4/131/59831/485390/01_1770711694_2980769.mp3|./music/feelingtrust.ogg"}
+			];
+
+			var preload;
+
+		    preload = new createjs.PreloadJS();
+		    //Install SoundJS as a plugin, then PreloadJS will initialize it automatically.
+		    preload.installPlugin(createjs.SoundJS);
+
+		    //Available PreloadJS callbacks
+		    preload.onFileLoad = function(event) {
+			    // Show the icon on loaded items.
+				//var div = document.getElementById(event.id);
+			    //div.style.backgroundImage = "url('assets/audioButtonSheet.png')";
+		    };
+			preload.onComplete = function(event) {
+				//document.getElementById("loader").className = "";
+			}
+
+		    //Load the manifest and pass 'true' to start loading immediately. Otherwise, you can call load() manually.
+		    preload.loadManifest(manifest, true);
+		    createjs.SoundJS.play("music");
+
+
 
             canvas = document.getElementById("myCanvas");
             stage = new createjs.Stage(canvas);
@@ -37,7 +67,8 @@
                 // draw the circle, and put it on stage:
                 var circle = new createjs.Shape();
                 circle.graphics.setStrokeStyle(15);
-                circle.graphics.beginStroke("#113355");
+                //circle.graphics.beginStroke("#113355");
+                circle.graphics.beginStroke(Q[Math.random(0,7)]);
                 circle.graphics.drawCircle(0,0,(i+1)*4);
                 circle.alpha = 1-i*0.02;
                 circle.x = Math.random()*550;
@@ -51,7 +82,7 @@
             activeCount = circleCount;
             stage.onMouseUp = handleMouseUp;
 
-	        text = new createjs.Text("remiel.me", "36px Arial", "#777");
+	        text = new createjs.Text("remiel.me", "36px Arial", "#42a8cb");
 	        text.x = 450;
 	        text.y = 200;
 	        stage.addChild(text);
@@ -61,26 +92,23 @@
 
 
         function handleMouseUp(event) {
-        	var _x;
-	        stage.mouseX > canvas.offsetWidth/2?_x = 0:_x = -180;
+        	//var _x;
+	        //stage.mouseX > canvas.offsetWidth/2?_x = 0:_x = -180;
 	        if (text) {
-	        	//stage.removeChild(text);
-	        	//text = null;
-	        	console.log(text);
-	        	console.log(createjs.Tween.get(text,{override:true}));
+	        	stage.removeChild(text);
+	        	text = null;
+	        	//console.log(text);
+	        	//console.log(createjs.Tween.get(text,{override:true}));
 	        }
 
-	        //text = new createjs.Text("remiel.me", "36px Arial", );
-	        //text.x = stage.mouseX + 230;
-	        //text.y = stage.mouseY + 100;
-	        //stage.addChild(text);
             for (var i=0; i<circleCount; i++) {
                 var ref = tweens[i].ref;
                 var tween = tweens[i].tween;
-                text.color = Q[Math.random(0,6)];
-                text.font = Math.random(12,72)+ "px Arial";
-        		createjs.Tween.get(text,{override:true}).wait(200).to({color:Q[Math.random(0,6)],x:canvas.offsetWidth-stage.mouseX+_x,y:stage.mouseY}, (0.2+i*0.04)*1500, createjs.Ease.bounceOut);
-				createjs.Tween.get(ref,{override:true}).to({x:stage.mouseX,y:stage.mouseY}, (0.5+i*0.04)*1500, createjs.Ease.bounceOut).call(tweenComplete);
+
+                //text.color = Q[Math.random(0,6)];
+                //text.font = Math.random(12,72)+ "px Arial";
+        		//createjs.Tween.get(text,{override:true}).to({color:Q[Math.random(0,6)],x:canvas.offsetWidth-stage.mouseX+_x,y:stage.mouseY}, (0.2+i*0.04)*1500, createjs.Ease.bounceOut);
+				createjs.Tween.get(ref,{override:true}).wait(2).to({x:stage.mouseX,y:stage.mouseY}, (0.5+i*0.04)*1500, createjs.Ease.bounceOut).call(tweenComplete);
             }
             activeCount = circleCount;
         }
@@ -102,7 +130,12 @@
 		    var d = a + native_random() * (b - a);
 		    return c === void 0 ? Math.round(d) : d.toFixed(c)
 		}
-		Q = ["#42a8cb", "#ee823d", "#cb9bce", "#a8a9a8", "#3b8d3a", "#1e4484", "#c0000b"]
+		Q = ["#42a8cb", "#ee823d", "#cb9bce", "#a8a9a8", "#3b8d3a", "#1e4484", "#c0000b", "#113355"]
+</script>
+
+<script type="text/javascript">
+	
+
 </script>
 </body>
 </html>
