@@ -7,10 +7,11 @@
 	<script type="text/javascript" src="js/less-1.3.0.min.js"></script>
 	<style type="text/css">
 		html, body {height: 100%; width: 100%; background: #000; position: relative;}
-		#myCanvas{left:0;position:absolute;top:0;}
+		canvas{left:0;position:absolute;top:0;}
 	</style>
 </head>
-<body onload="init();">
+<body onload="init();init3();">
+<canvas id="myCanvas2"></canvas>
 <canvas id="myCanvas"></canvas>
 <!-- <script type="text/javascript" src="js/jquery-1.7.min.js"></script> -->
 	<script type="text/javascript">var createjs = window;</script>
@@ -176,6 +177,87 @@
     function easeIn(ratio) {
         return ratio*ratio;
     }
+</script>
+
+
+<script>
+function init3(){
+
+    var width = $('body').width();
+    var height = $('body').height();
+    var fps = 24;
+    var g = .1;
+    var canvas = document.querySelector("#myCanvas2");
+    canvas.width = width, canvas.height = height;
+    var ctx = canvas.getContext("2d");
+    var snow = new Image();
+    snow.onload = init;
+    snow.src="http://sandbox.runjs.cn/uploads/rs/60/5l2za5rc/Snowflakes.png";
+
+
+    var Particle = function(){
+      this.init();
+    };
+    Particle.prototype.init = function(){
+            this.imgFrame = Math.floor(Math.random()*5);
+            this.x = Math.random()*width;
+            this.y = -10;
+            this.angle = 0;
+            this.angleV = Math.random()*1;
+            this.vy = Math.random()*2;
+            this.vx = Math.random()*1-.5;
+            this.ay = Math.random()*.1+.2;
+            this.ax = Math.random()*.2 - .1;
+    };
+
+    Particle.prototype.render = function(){
+            ctx.save();
+            ctx.translate(this.x, this.y);
+            ctx.rotate(this.angle);
+            ctx.drawImage(snow, this.imgFrame*20, 0, 20, 20, -10, -10, 20, 20);
+            ctx.restore();
+    };
+
+    Particle.prototype.update = function(){
+            this.angle += this.angleV;
+            this.x += this.vx;
+            this.y += this.vy;
+            this.vy += this.ay;
+            this.vx += this.ax;
+            this.vx=Math.random()>.995?this.vx *-1:this.vx;
+            this.alive = true;
+            if(this.y > height) this.init();
+    };
+
+    Particle.pool = [];
+    Particle.create = function(){
+            return Particle.pool.push(new Particle);
+    };
+
+    Particle.update = function(){
+            Particle.pool.forEach(function(obj){
+                    obj.update();
+                    obj.render();
+            });
+    };
+
+    function create(n){
+            while(n--){
+                    setTimeout(Particle.create,n*70);
+            }
+    }
+
+    function init(){
+            setInterval(update, 1000/fps);
+            create(100);
+    }
+
+    function update(){
+            ctx.clearRect(0, 0, width, height);
+            Particle.update();
+    }
+
+}
 </script>
 </body>
 </html>
