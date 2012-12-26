@@ -11,7 +11,7 @@
 		canvas{left:0;position:absolute;top:0;}
 	</style>
 </head>
-<body onload="init();init3();">
+<body onload="init();">
 <canvas id="myCanvas2"></canvas>
 <canvas id="myCanvas"></canvas>
 <!-- <script type="text/javascript" src="js/jquery-1.7.min.js"></script> -->
@@ -35,7 +35,8 @@
 
 			// begin loading content (only sounds to load)
 			var manifest = [
-				{id:"music", src:"http://f3.xiami.net/4/189/57089/478098/02_1770625900_2881483.mp3|http://f3.xiami.net/4/189/57089/478098/01_1770625899_2881482.mp3|http://f3.xiami.net/4/131/59831/485390/01_1770711694_2980769.mp3|./music/feelingtrust.ogg"}
+                // {id:"music", src:"http://f3.xiami.net/4/189/57089/478098/02_1770625900_2881483.mp3|http://f3.xiami.net/4/189/57089/478098/01_1770625899_2881482.mp3|http://f3.xiami.net/4/131/59831/485390/01_1770711694_2980769.mp3|./music/feelingtrust.ogg"}
+				{id:"music", src:"http://f3.xiami.net/4/189/57089/478098/02_1770625900_2881483.mp3|./music/feelingtrust.ogg"}
 			];
 
 			var preload;
@@ -91,6 +92,9 @@
 	        stage.addChild(text);
 
 			createjs.Ticker.addListener(window);
+            createjs.setTimeout(function(){
+                init3();
+            },3000);
         }
 
 
@@ -153,6 +157,8 @@
             box.style.position = "absolute";
             box.style.borderRadius = "2px";
             box.style.backgroundColor = "#0F0";
+            // box.style.backgroundColor = Q[Math.random(0,7)];
+            // box.style.opacity = .5;
             document.body.appendChild(box);
             var a = (Math.random()*Math.PI*2*16|0)/16;
             box.style.webkitTransform = "rotate("+a+"rad)";
@@ -193,7 +199,7 @@ function init3(){
     var ctx = canvas.getContext("2d");
     var snow = new Image();
     snow.onload = init;
-    snow.src="http://sandbox.runjs.cn/uploads/rs/60/5l2za5rc/Snowflakes.png";
+    snow.src="style/images/Snowflakes.png";
 
 
     var Particle = function(){
