@@ -26,6 +26,7 @@
 		<div class="mask"></div>
 	</div>
 <script type="text/javascript" src="../js/jquery-1.7.min.js"></script>
+<script type="text/javascript" src="../js/jquery.easing.js"></script>
 <script type="text/javascript">
 	$('.tag').hover(function(){
 		$('.mask').addClass("active")
@@ -33,10 +34,10 @@
 		$('.mask').removeClass('active')
 	})
 	$('.left').click(function(){
-		$('.wrapper').animate({left:"-1000px"},1000)
+		$('.wrapper').animate({left:"-1000px"},{duration: 500,easing:"easeInOutElastic"})
 	})
 	$('.right').click(function(){
-		$('.wrapper').animate({left:"0px"},1000)
+		$('.wrapper').animate({left:"0px"},{duration: 500,easing:"easeInOutElastic"} )
 	})
 </script>
 </body>
