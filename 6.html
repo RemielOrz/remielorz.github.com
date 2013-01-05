@@ -2,10 +2,10 @@
 <html lang="en-US">
 <head>
 	<meta charset="UTF-8">
-	<title>里程碑</title>
+	<title>消息</title>
 	<link rel="stylesheet" href="style/eTask.css">
 	<!-- <link rel="stylesheet/less" type="text/css" href="style/eTask.less"> -->
-	<script type="text/javascript" src="js/less-1.3.0.min.js"></script>
+	<!-- <script type="text/javascript" src="js/less-1.3.0.min.js"></script> -->
 </head>
 <body>
 	<div class="wrap">
@@ -94,80 +94,55 @@
 			</div>
 		</div>
 		<!--main -->
-		<div class="main">
-			<dl class="hdInfo">
-				<dt class="hdInfo_dt">一说改造 / 产品设计</dt>
-				<dd class="hdInfo_dd">宣言：为人民服务</dd>
-				<dd class="hdInfo_dd">负责人：<a href="">赛琳娜</a>、<a href="">阿福</a>、<a href="">伏尔泰</a></dd>
-				<dd class="infoImg"><img class="img" src="style/images/o.jpg"></dd>
-			</dl>
-			<div class="hdProg">
-				<!-- tips  margin-left=-width/2-5 -->
-				<div class="tips" style="left:30%;margin-left:-109px">输出概念设计报告，完成一阶段工作</div>
-				<i class="stage" style="width:30%"></i>
-				<i class="stage" style="width:20%"></i>
-				<i class="stage disabled" style="width:10%"></i>
-				<i class="stage disabled" style="width:40%"></i>
-			</div>
+		<div class="main msgPage">
 			<div class="box">
 				<div class="topBar">
-					<span class="tab">任务</span>
-					<span class="tab">成员</span>
-					<span class="tab selected">里程碑</span>
-					<span class="tab">动态</span>
-					<span class="tab">文件</span>
-					<div class="btn">添加任务</div>
-					<div class="sch">
-						<i class="schIco"></i>
-						<input type="text" class="schIpt" placeholder="任务名">
-					</div>
+					<span class="tab selected">今天进行</span>
+					<span class="tab">今天到期<span class="sNavMsg">99+</span></span>
+					<a href="" class="msgSettingsIco">设置</a>
 				</div>
-				<!-- 里程碑 -->
-				<div class="bd milestonebd">
-					<div class="msCont">
-						<div class="row">
-							<div class="rl">* 新里程碑</div>
-							<div class="rr">
-								<div class="iptbox"><input type="text" class="ipt"></div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="rl">开始时间</div>
-							<div class="rr">
-								<div class="iptbox timeIpt"><input type="text" class="ipt"></div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="btn">添加</div>
-						</div>
-					</div>
-					<div class="milestone">
-						<div class="msCont">
-							<a href="">里程碑名称</a>
-							<i class="ico_02"></i>
-							<i class="ico_01"></i>
-							<i class="msSwitch on">完成</i>
-						</div>
-						<div class="msCont">
-							<span class="gray">没有相关任务</span>
-							<span class="gray fr">2012-11-23 16:43</span>
-						</div>
-					</div>
-					<div class="milestone">
-						<div class="msCont">
-							<a href="">里程碑名称</a>
-							<i class="ico_02 disabled"></i>
-							<i class="ico_01 disabled"></i>
-							<i class="msSwitch off">未完成</i>
-						</div>
-						<div class="msCont">
-							<span>5个任务：1个进行中</span>
-							<span class="gray fr">2012-11-23 16:43</span>
-						</div>
-					</div>
-					<div class="milestone null">暂无里程碑 :(</div>
+				<!-- 消息 -->
+				<div class="bd">
+					<table class="msgTable" width="100%">
+						<tbody>
+							<tr>
+								<th class="th" width="20%">项目</th>
+								<th class="th" width="20%">任务</th>
+								<th class="th">消息</th>
+								<th class="th" width="20%">时间</th>
+							</tr>
+							<tr>
+								<td class="td">
+									<a href="">一说改版</a>
+								</td>
+								<td class="td">
+									<a href="">视觉概念设计</a>
+								</td>
+								<td class="td">
+									<a href="">张三</a><span>把你加入项目 | 你的角色：负责人</span>
+								</td>
+								<td class="td">
+									<span class="gray">2012-11-23 16:43</span>
+								</td>
+							</tr>
+							<tr>
+								<td class="td">
+									<a href="">一说改版</a>
+								</td>
+								<td class="td">
+									<a href="">视觉概念设计视觉概念设计视觉概念设计视觉概念设计视觉概念设计</a>
+								</td>
+								<td class="td">
+									<a href="">张三</a><span>把你加入项目 | 你的角色：负责人</span>
+								</td>
+								<td class="td">
+									<span class="gray">2012-11-23 16:43</span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
-				<!-- 里程碑 end-->
+				<!-- 消息 end -->
 			</div>
 		</div>
 	</div>

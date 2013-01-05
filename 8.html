@@ -1,0 +1,136 @@
+<!doctype html> 
+<html> 
+<head> 
+    <meta charset="utf-8"> 
+    <title>新增项目</title> 
+	<link rel="stylesheet" href="style/eTask.css">
+	<!-- <link rel="stylesheet/less" type="text/css" href="style/eTask.less"> -->
+	<script type="text/javascript" src="js/less-1.3.0.min.js"></script>
+</head>
+<body>
+	
+	<!-- os G窗口, oWindow_current 当前窗口-->
+	<div class="oWindow oWindow_current" style="top:2px;left:9px;width:670px;z-index:99;">
+		<div class="oWindowTop">
+		    <div class="oWindowBtnBar">
+		        <a href="" class="oWinBtn oWinMin" title="最小化" style="display:none"></a>
+		        <a href="" class="oWinBtn oWinMax" title="最大化" style="display:none"></a>
+		        <a href="" class="oWinBtn oWinRestore" title="还原" style="display:none"></a>
+		        <a href="" class="oWinBtn oWinClose" title="关闭"></a>
+		    </div>
+		    <div class="oWindowTitle">新增项目</div>
+		</div>
+
+		<!-- 工具栏 -->
+		<div class="oWinToolBar"></div>
+
+		<div class="oWindowBody">
+			<!-- 新增项目 -->
+				<div class="addNewProjWrp">
+					<div class="row">
+						<div class="rl">* 任务名称</div>
+						<div class="rr">
+							<div class="iptbox"><input type="text" class="ipt"></div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="rl">* 新里程碑</div>
+						<div class="rr">
+							<div class="iptbox"><input type="text" class="ipt"></div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="rl">宣言</div>
+						<div class="rr">
+							<div class="iptbox"><input type="text" class="ipt"></div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="rl">图标</div>
+						<div class="rr">
+							<div class="iptbox uploadbox fl"></div>
+							<div class="btn2 fl"><input type="file" class="uploadipt">浏览</div>
+							<div class="remark clear">50x50,jpg/gif/png</div>
+							<div class="remark">建议采用png24透明底格式图片</div>
+							
+						</div>
+					</div>
+					<div class="row">
+						<div class="rl">* 项目成员</div>
+						<div class="rr">
+							<div class="btn2">选人</div>
+							<div class="addMenberWrp">
+								<div class="memberLabel">remiel<i class="ico"></i></div>
+								<div class="memberLabel">remiel<i class="ico"></i></div>
+								<div class="memberLabel">切糕<i class="ico"></i></div>
+								<div class="memberLabel">切糕<i class="ico"></i></div>
+								<div class="memberLabel">remiel<i class="ico"></i></div>
+								<div class="memberLabel">remiel<i class="ico"></i></div>
+								<div class="memberLabel">remiel<i class="ico"></i></div>
+								<div class="memberLabel">切糕<i class="ico"></i></div>
+								<div class="memberLabel">remiel<i class="ico"></i></div>
+								<div class="memberLabel">remiel<i class="ico"></i></div>
+								<div class="memberLabel">remiel<i class="ico"></i></div>
+								<div class="memberLabel">remiel<i class="ico"></i></div>
+								<div class="memberLabel">切糕<i class="ico"></i></div>
+								<div class="memberLabel">remiel<i class="ico"></i></div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="rl">* 项目负责人</div>
+						<div class="rr">
+							<div class="memberChkBoxWrp">
+								<div class="memberChkBox">
+									<input type="checkbox" class="chk">
+									<label class="label">Remiel</label>
+								</div>
+								<div class="memberChkBox">
+									<input type="checkbox" class="chk">
+									<label class="label">Remiel</label>
+								</div>
+								<div class="memberChkBox">
+									<input type="checkbox" class="chk">
+									<label class="label">Remiel</label>
+								</div>
+								<div class="memberChkBox">
+									<input type="checkbox" class="chk">
+									<label class="label">Remiel</label>
+								</div>
+								<div class="memberChkBox">
+									<input type="checkbox" class="chk">
+									<label class="label">Remiel</label>
+								</div>
+								<div class="memberChkBox">
+									<input type="checkbox" class="chk">
+									<label class="label">Remiel</label>
+								</div>
+								<div class="memberChkBox">
+									<input type="checkbox" class="chk">
+									<label class="label">Remiel</label>
+								</div>
+							</div>
+							<div>
+								<input type="checkbox" class="chk">
+								<label class="label">成员只能查阅自己参与的任务</label>
+							</div>
+
+						</div>
+					</div>
+					<div class="row">
+						<div class="btn1">添加</div>
+					</div>
+				</div>
+			<!-- 新增项目 end -->
+		</div>
+	</div>
+
+
+
+<script type="text/javascript" src="http://asset.dev.gleasy.cn:81/script/jquery/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="http://asset.dev.gleasy.cn:81/script/jquery/jquery-ui-1.8.9.js"></script>
+<script type="text/javascript">
+	//$('.oWindow').resizable()
+</script>
+</body>
+</html>

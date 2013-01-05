@@ -1,0 +1,61 @@
+<!doctype html> 
+<html> 
+<head> 
+    <meta charset="utf-8"> 
+    <title>消息-设置</title> 
+	<!-- <link rel="stylesheet" href="style/eTask.css"> -->
+	<link rel="stylesheet/less" type="text/css" href="style/eTask.less">
+	<script type="text/javascript" src="js/less-1.3.0.min.js"></script>
+</head>
+<body>
+	
+	<!-- os G窗口, oWindow_current 当前窗口-->
+	<div class="oWindow oWindow_current" style="top:2px;left:9px;width:560px;z-index:99;">
+		<div class="oWindowTop">
+		    <div class="oWindowBtnBar">
+		        <a href="" class="oWinBtn oWinMin" title="最小化" style="display:none"></a>
+		        <a href="" class="oWinBtn oWinMax" title="最大化" style="display:none"></a>
+		        <a href="" class="oWinBtn oWinRestore" title="还原" style="display:none"></a>
+		        <a href="" class="oWinBtn oWinClose" title="关闭"></a>
+		    </div>
+		    <div class="oWindowTitle">消息设置</div>
+		</div>
+
+		<!-- 工具栏 -->
+		<div class="oWinToolBar"></div>
+
+		<div class="oWindowBody">
+			<!-- 消息设置 -->
+				<div class="msgSettingsWrp">
+					<div>消息中心提醒：<i class="msSwitch on">开</i></div>
+					<div>
+						“我参与的任务”开始时间：开始前
+						<input type="text" class="ipt iptbox">
+						<select class="slt">
+							<option value="天">天</option>
+						</select>
+						提醒
+					</div>
+					<div>
+						“我参与的任务”到期提醒：开始前
+						<input type="text" class="ipt iptbox">
+						<select class="slt">
+							<option value="天">天</option>
+						</select>
+						提醒
+					</div>
+					<div class="btn1">确定</div>
+				</div>
+			<!-- 消息设置 end -->
+		</div>
+	</div>
+
+
+
+<script type="text/javascript" src="http://asset.dev.gleasy.cn:81/script/jquery/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="http://asset.dev.gleasy.cn:81/script/jquery/jquery-ui-1.8.9.js"></script>
+<script type="text/javascript">
+	//$('.oWindow').resizable()
+</script>
+</body>
+</html>
