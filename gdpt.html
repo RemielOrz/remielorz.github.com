@@ -1,8 +1,9 @@
-<!DOCTYPE HTML>
-<html lang="en-US">
+<!doctype html>
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title></title>
+	<title>GDPT</title>
+
 	<link rel="stylesheet" href="style/animate.css">
 	<style type="text/css">
 		*{margin: 0;padding: 0}
@@ -112,17 +113,92 @@
 		.ui-resizable-ne { cursor: ne-resize; width: 9px; height: 9px; right: -5px; top: -5px;}
 
 
-
-
 	</style>
 </head>
 <body>
-	<div id="outer">
-	    <div id="canvasContainer">
-	        <canvas id="mainCanvas"></canvas>
-	        <div id="output"></div>
-	    </div>
+	
+
+
+	<div class="ani">
+		
+			<h3>Attention seekers</h3>
+			<a class="butt butt-small" data-test="flash">flash</a>
+			<a class="butt butt-small" data-test="bounce">bounce</a>
+			<a class="butt butt-small" data-test="shake">shake</a>
+			<a class="butt butt-small" data-test="tada">tada</a>
+			<a class="butt butt-small" data-test="swing">swing</a>
+			<a class="butt butt-small" data-test="wobble">wobble</a>
+			<a class="butt butt-small" data-test="wiggle">wiggle</a>
+			<a class="butt butt-small" data-test="pulse">pulse</a>
+
+			<h3>Flippers (currently Webkit, Firefox, &amp; IE10 only)</h3>
+			<a class="butt butt-small" data-test="flip">flip</a>
+			<a class="butt butt-small" data-test="flipInX">flipInX</a>
+			<a class="butt butt-small" data-test="flipOutX">flipOutX</a>
+			<a class="butt butt-small" data-test="flipInY">flipInY</a>
+			<a class="butt butt-small" data-test="flipOutY">flipOutY</a>
+
+			<h3>Fading entrances</h3>
+			<a class="butt butt-small" data-test="fadeIn">fadeIn</a>
+			<a class="butt butt-small" data-test="fadeInUp">fadeInUp</a>
+			<a class="butt butt-small" data-test="fadeInDown">fadeInDown</a>
+			<a class="butt butt-small" data-test="fadeInLeft">fadeInLeft</a>
+			<a class="butt butt-small" data-test="fadeInRight">fadeInRight</a>
+			<a class="butt butt-small" data-test="fadeInUpBig">fadeInUpBig</a>
+			<a class="butt butt-small" data-test="fadeInDownBig">fadeInDownBig</a>
+			<a class="butt butt-small" data-test="fadeInLeftBig">fadeInLeftBig</a>
+			<a class="butt butt-small" data-test="fadeInRightBig">fadeInRightBig</a>
+
+			<h3>Fading exits</h3>
+			<a class="butt butt-small" data-test="fadeOut">fadeOut</a>
+			<a class="butt butt-small" data-test="fadeOutUp">fadeOutUp</a>
+			<a class="butt butt-small" data-test="fadeOutDown">fadeOutDown</a>
+			<a class="butt butt-small" data-test="fadeOutLeft">fadeOutLeft</a>
+			<a class="butt butt-small" data-test="fadeOutRight">fadeOutRight</a>
+			<a class="butt butt-small" data-test="fadeOutUpBig">fadeOutUpBig</a>
+			<a class="butt butt-small" data-test="fadeOutDownBig">fadeOutDownBig</a>
+			<a class="butt butt-small" data-test="fadeOutLeftBig">fadeOutLeftBig</a>
+			<a class="butt butt-small" data-test="fadeOutRightBig">fadeOutRightBig</a>
+
+			<h3>Bouncing entrances</h3>
+			<a class="butt butt-small" data-test="bounceIn">bounceIn</a>
+			<a class="butt butt-small" data-test="bounceInDown">bounceInDown</a>
+			<a class="butt butt-small" data-test="bounceInUp">bounceInUp</a>
+			<a class="butt butt-small" data-test="bounceInLeft">bounceInLeft</a>
+			<a class="butt butt-small" data-test="bounceInRight">bounceInRight</a>
+
+			<h3>Bouncing exits</h3>
+			<a class="butt butt-small" data-test="bounceOut">bounceOut</a>
+			<a class="butt butt-small" data-test="bounceOutDown">bounceOutDown</a>
+			<a class="butt butt-small" data-test="bounceOutUp">bounceOutUp</a>
+			<a class="butt butt-small" data-test="bounceOutLeft">bounceOutLeft</a>
+			<a class="butt butt-small" data-test="bounceOutRight">bounceOutRight</a>
+
+			<h3>Rotating entrances</h3>
+			<a class="butt butt-small" data-test="rotateIn">rotateIn</a>
+			<a class="butt butt-small" data-test="rotateInDownLeft">rotateInDownLeft</a>
+			<a class="butt butt-small" data-test="rotateInDownRight">rotateInDownRight</a>
+			<a class="butt butt-small" data-test="rotateInUpLeft">rotateInUpLeft</a>
+			<a class="butt butt-small" data-test="rotateInUpRight">rotateInUpRight</a>
+
+			<h3>Rotating exits</h3>
+			<a class="butt butt-small" data-test="rotateOut">rotateOut</a>
+			<a class="butt butt-small" data-test="rotateOutDownLeft">rotateOutDownLeft</a>
+			<a class="butt butt-small" data-test="rotateOutDownRight">rotateOutDownRight</a>
+			<a class="butt butt-small" data-test="rotateOutUpLeft">rotateOutUpLeft</a>
+			<a class="butt butt-small" data-test="rotateOutUpRight">rotateOutUpRight</a>
+
+			<h3>Lightspeed</h3>
+			<a class="butt butt-small" data-test="lightSpeedIn">lightSpeedIn</a>
+			<a class="butt butt-small" data-test="lightSpeedOut">lightSpeedOut</a>
+
+			<h3>Specials</h3>
+			<a class="butt butt-small" data-test="hinge">hinge</a>
+			<a class="butt butt-small" data-test="rollIn">rollIn</a>
+			<a class="butt butt-small" data-test="rollOut">rollOut</a>
+
 	</div>
+
 
 	<div class="gdpt-shoutbox" id='animateTest'>
 		<div class="gdpt-sb-hd">
@@ -165,134 +241,6 @@
 	<div class="gdpt-btn">群聊区<a href="javascript:;" class="switch on"></a></div>
 
 	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/preloadjs-0.2.0.min.js"></script>
-	<script type="text/javascript" src="js/soundjs-0.3.0.min.js"></script>
-	<script type="text/javascript" src="js/CSSPlugin.js"></script>
-	<script type="text/javascript">
-
-	var bdw = $('body').width(),bdh = $('body').height();
-    $('#mainCanvas').attr({'width':bdw-20,'height':bdh-20});
-    $('#canvasContainer').css({'width':bdw+'px','height':bdh+'px',top:-(bdh/2)+'px',left:-(bdw/2)+'px'});
-	(function() {
-	    //var q,w,e,r,t,y,u,i,o,p,a,s,d,f,g,h,j,k,l,z,x,c,v,b,n,m,Q,W,E,R,T,Y,U,I,O,P,A,S,D,F,G,H,J,K,L,Z,X,C,V,B,N,M;
-	    function C() {
-	        e.globalCompositeOperation = "source-over";
-	        e.fillStyle = "rgba(0,0,0,0.65)";
-	        e.fillRect(0, 0, f, p);
-	        e.globalCompositeOperation = "lighter";
-	        x = q - u;
-	        y = r - v;
-	        u = q;
-	        v = r;
-	        for (var d = 0.86 * f, l = 0.125 * f, m = 0.5 * f, t = Math.random, n = Math.abs, o = z; o--; ) {
-	            var h = A[o], i = h.x, j = h.y, a = h.a, b = h.b, c = i - q, k = j - r, g = Math.sqrt(c * c + k * k) || 0.001, c = c / g, k = k / g;
-	            if (w && g < m)
-	                var s = 14 * (1 - g / m), a = a + (c * s + 0.5 - t()), b = b + (k * s + 0.5 - t());
-	            g < d && (s = 0.0014 * (1 - g / d) * f, a -= c * s, b -= k * s);
-	            g < l && (c = 2.6E-4 * (1 - g / l) * f, a += x * c, b += y * c);
-	            a *= B;
-	            b *= B;
-	            c = n(a);
-	            k = n(b);
-	            g = 
-	            0.5 * (c + k);
-	            0.1 > c && (a *= 3 * t());
-	            0.1 > k && (b *= 3 * t());
-	            c = 0.45 * g;
-	            c = Math.max(Math.min(c, 3.5), 0.4);
-	            i += a;
-	            j += b;
-	            i > f ? (i = f, a *= -1) : 0 > i && (i = 0, a *= -1);
-	            j > p ? (j = p, b *= -1) : 0 > j && (j = 0, b *= -1);
-	            h.a = a;
-	            h.b = b;
-	            h.x = i;
-	            h.y = j;
-	            e.fillStyle = h.color;
-	            e.beginPath();
-	            e.arc(i, j, c, 0, D, !0);
-	            e.closePath();
-	            e.fill()
-	        }
-	    }
-	    function E(d) {
-	        d = d ? d : window.event;
-	        q = d.clientX - m.offsetLeft - n.offsetLeft;
-	        r = d.clientY - m.offsetTop - n.offsetTop
-	    }
-	    function F() {
-	        w = !0;
-	        return !1
-	    }
-	    function G() {
-	        return w = !1
-	    }
-	    function H() {
-	        this.color = "rgb(" + Math.floor(255 * Math.random()) + "," + Math.floor(255 * 
-	        Math.random()) + "," + Math.floor(255 * Math.random()) + ")";
-	        this.b = this.a = this.x = this.y = 0;
-	        this.size = 1
-	    }
-	    var D = 2 * Math.PI, f = $('body').width(), p = $('body').height(), z = 600, B = 0.96, A = [], o, e, n, m, q, r, x, y, u, v, w;
-	    window.onload = function() {
-	    	init2();
-	        o = document.getElementById("mainCanvas");
-	        if (o.getContext) {
-	            m = document.getElementById("outer");
-	            n = document.getElementById("canvasContainer");
-	            e = o.getContext("2d");
-	            for (var d = z; d--; ) {
-	                var l = new H;
-	                l.x = 0.5 * f;
-	                l.y = 0.5 * p;
-	                l.a = 34 * Math.cos(d) * Math.random();
-	                l.b = 34 * Math.sin(d) * Math.random();
-	                A[d] = l
-	            }
-	            q = u = 0.5 * f;
-	            r = v = 0.5 * p;
-	            document.onmousedown = F;
-	            document.onmouseup = G;
-	            document.onmousemove = E;
-	            setInterval(C, 33);
-	            document.getElementById("output").innerHTML = 'remiel.me'
-	        } else
-	            document.getElementById("output").innerHTML = "Sorry, needs a recent version of Chrome, Firefox, Opera, Safari, or Internet Explorer 9."
-	    }
-	})();
-
-
-	function init2(){
-		// begin loading content (only sounds to load)
-		var manifest = [
-            // {id:"music", src:"http://f3.xiami.net/4/189/57089/478098/02_1770625900_2881483.mp3|http://f3.xiami.net/4/189/57089/478098/01_1770625899_2881482.mp3|http://f3.xiami.net/4/131/59831/485390/01_1770711694_2980769.mp3|./music/feelingtrust.ogg"}
-			{id:"music", src:"http://f3.xiami.net/4/189/57089/478098/02_1770625900_2881483.mp3|./music/feelingtrust.ogg"}
-		];
-
-		var preload;
-
-	    preload = new createjs.PreloadJS();
-	    //Install SoundJS as a plugin, then PreloadJS will initialize it automatically.
-	    preload.installPlugin(createjs.SoundJS);
-
-	    //Available PreloadJS callbacks
-	    preload.onFileLoad = function(event) {
-		    // Show the icon on loaded items.
-			//var div = document.getElementById(event.id);
-		    //div.style.backgroundImage = "url('assets/audioButtonSheet.png')";
-	    };
-		preload.onComplete = function(event) {
-			//document.getElementById("loader").className = "";
-		}
-
-	    //Load the manifest and pass 'true' to start loading immediately. Otherwise, you can call load() manually.
-	    preload.loadManifest(manifest, true);
-	    createjs.SoundJS.play("music");
-	}
-
-
-	</script>
-	<!-- gdpt -->
 	<script type="text/javascript" src="js/jquery-ui-1.8.9.js"></script>
 	<!-- gdpt -->
 	<script>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ajax</title>
+	<style>
+		.data{color:red;}
+	</style>
+</head>
+<body>
+	<button>get</button>
+	<div class="data"></div>
+	<script type="text/javascript" src="../js/jquery-1.7.min.js"></script>
+	<script>
+		var data_;
+		$('button').click(function(){
+			$.ajax({
+				type:"Post",
+				url:"1.json",
+				dataType: "json",
+				success: function (data) {
+					console.log(data);
+					data_=data;
+					$(".data").html(data_);
+					console.log("get it")
+				},
+				error: function () {
+					$(".data").html("请求失败!");
+					console.log("悲剧")
+				}
+			})
+			// $.getJSON("1.json",function(d){
+			// 	console.log(d)
+			// });
+			// $.getJSON("1.js", function(json){
+			//   alert("JSON Data: " + json);
+			// });
+		})
+	</script>
+</body>
+</html>
