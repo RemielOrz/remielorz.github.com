@@ -128,7 +128,7 @@
 		<div class="gdpt-sb-hd">
 			<a href="javascript:;" class="gdpt-sb-btn close" title=""></a>
 			<a href="javascript:;" class="gdpt-sb-btn max" title=""></a>
-			<a href="javascript:;" class="gdpt-sb-btn restore" title=""></a>
+			<!-- <a href="javascript:;" class="gdpt-sb-btn restore" title=""></a> -->
 			<a href="javascript:;" class="gdpt-sb-btn min" title=""></a>
 			<div class="gdpt-sb-title">群聊区_(:з」∠)_</div>
 		</div>
@@ -313,7 +313,7 @@
 			var ani=["flash", "bounce", "shake", "tada", "swing", "wobble", "wiggle", "pulse", "flip", "flipInX", "flipOutX", "flipInY", "flipOutY", "fadeIn", "fadeInUp", "fadeInDown", "fadeInLeft", "fadeInRight", "fadeInUpBig", "fadeInDownBig", "fadeInLeftBig", "fadeInRightBig", "fadeOut", "fadeOutUp", "fadeOutDown", "fadeOutLeft", "fadeOutRight", "fadeOutUpBig", "fadeOutDownBig", "fadeOutLeftBig", "fadeOutRightBig", "bounceIn", "bounceInDown", "bounceInUp", "bounceInLeft", "bounceInRight", "bounceOut", "bounceOutDown", "bounceOutUp", "bounceOutLeft", "bounceOutRight", "rotateIn", "rotateInDownLeft", "rotateInDownRight", "rotateInUpLeft", "rotateInUpRight", "rotateOut", "rotateOutDownLeft", "rotateOutDownRight", "rotateOutUpLeft", "rotateOutUpRight", "lightSpeedIn", "lightSpeedOut", "hinge", "rollIn", "rollOut"];
 			var aniIn=["flash", "bounce", "shake", "tada", "swing", "wobble", "wiggle", "pulse", "flip", "flipInX","flipInY", "fadeIn", "fadeInUp", "fadeInDown", "fadeInLeft", "fadeInRight", "fadeInUpBig", "fadeInDownBig", "fadeInLeftBig", "fadeInRightBig", "bounceIn", "bounceInDown", "bounceInUp", "bounceInLeft", "bounceInRight", "rotateIn", "rotateInDownLeft", "rotateInDownRight", "rotateInUpLeft", "rotateInUpRight", "lightSpeedIn", "rollIn"]
 			var aniOut=["flipOutX",  "flipOutY",, "fadeOut", "fadeOutUp", "fadeOutDown", "fadeOutLeft", "fadeOutRight", "fadeOutUpBig", "fadeOutDownBig", "fadeOutLeftBig", "fadeOutRightBig", "bounceOut", "bounceOutDown", "bounceOutUp", "bounceOutLeft", "bounceOutRight", "rotateOut", "rotateOutDownLeft", "rotateOutDownRight", "rotateOutUpLeft", "rotateOutUpRight", "lightSpeedOut", "hinge", "rollOut"]
-			$('.gdpt-btn').toggle(function(){
+			$('.close,.gdpt-btn').toggle(function(){
 				testAnim(aniOut[Math.random(0,aniOut.length)]);
 				var wait = window.setTimeout( function(){
 					$('#animateTest').hide();},
@@ -323,7 +323,13 @@
 			},function(){
 				$('.switch').removeClass('off').addClass('on');
 				$('#animateTest').show();testAnim(aniIn[Math.random(0,aniIn.length)]);
-			})
+			});
+			$('.max').click(function(){
+				$('#animateTest').css({left:'30px',right:'30px',top:0,bottom:'30px',width:'auto',height:'auto'})
+			});
+			$('.min').click(function(){
+				$('#animateTest').css({left:'auto',right:'30px',top:'auto',bottom:'30px',width:'650px',height:'240px'})
+			});
 		});
 
 		$('#animateTest').draggable({ cancel: '.gdpt-sb-bd,.gdpt-sb-ft' });
