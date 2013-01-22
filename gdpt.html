@@ -81,6 +81,7 @@
 		.gdpt-sb-hd{_cursor: default;}
 		.gdpt-btn,#gdpt-shoutbox{_position:absolute;}
 		.gdpt-sb-restore,.gdpt-sb-min,.gdpt-sb-max{_display: none;}
+		.gdpt-sb-close{_background:none;_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://remiel.me/style/images/gdpt-ie6-close.png')}
 
 	</style>
 </head>
@@ -117,7 +118,7 @@
 	<!-- gdpt -->
 	<script>
 		function testAnim(x) {
-			$('#gdpt-shoutbox').removeClass().addClass("gdpt-ie-byebye "+x);
+			$('#gdpt-shoutbox').removeClass().addClass(x);
 			var wait = window.setTimeout( function(){
 				$('#gdpt-shoutbox').removeClass()},
 				1300
