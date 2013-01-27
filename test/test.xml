@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="gb2312"?>
+<RequestProductInfo>
+<MemberNO>021002343</ MemberNO >
+<Products>
+<Product>
+      <SpuCode>TEST987656432</SpuCode>
+      <NewspuCode></NewspuCode>
+      <Category>装潢/灯具/五金/安防/卫浴</Category>
+      <ActionType>ADD</ActionType>
+      <Name>活性炭1kg</Name>
+      <Property>颜色:红色;尺寸: M </Property>
+      <Volume>1</Volume>
+      <Weight>1</Weight>
+      <Unit>包</Unit>
+	  <AlterStorageAmount>20</AlterStorageAmount>
+      <PackageSpec>12包/箱</PackageSpec>
+</Product>
+<Product>
+      <SpuCode>TEST987656432</SpuCode>
+      <NewspuCode>TEST987656436</NewspuCode>
+      <Category>装潢/灯具</Category>
+      <ActionType>MODIFY</ActionType>
+      <Name>1.5M沙发灯</Name>
+      <Property>颜色:白色</Property>
+      <Volume>1.5</Volume>
+      <Weight>1</Weight>
+      <Unit>包</Unit>
+<AlterStorageAmount>20</AlterStorageAmount>
+      <PackageSpec>1只/箱</PackageSpec>
+</Product>
+</Products >
+</RequestProductInfo >

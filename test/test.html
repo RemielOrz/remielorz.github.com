@@ -16,8 +16,7 @@
 		$('button').click(function(){
 			$.ajax({
 				type:"Post",
-				url:"1.json",
-				dataType: "json",
+				url:"test.xml",
 				success: function (data) {
 					console.log(data);
 					data_=data;
@@ -35,6 +34,9 @@
 			// $.getJSON("1.js", function(json){
 			//   alert("JSON Data: " + json);
 			// });
+			// $('.data').load('test.xml',function(s){
+			// 	console.log(s)
+			// })
 		})
 	</script>
 </body>
