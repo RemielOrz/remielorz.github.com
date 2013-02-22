@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>GDPT</title>
+
+	<link rel="stylesheet" href="../style/animate.css">
+	<style type="text/css">
+		html, body {
+			margin:0;
+			padding:0;
+			/*background: #000000; */
+			color: #666666;
+			line-height: 1.25em;
+			height: 600px;
+			width: 100%;
+			position: relative;
+			font-size: 12px;
+		}
+		/* gdpt */
+		#gdpt-shoutbox{
+			-webkit-animation-duration: 1s;
+			-webkit-animation-delay: .2s;
+			-webkit-animation-timing-function: ease;
+			-webkit-animation-fill-mode: both;
+			-moz-animation-duration: 1s;
+			-moz-animation-delay: .2s;
+			-moz-animation-timing-function: ease;
+			-moz-animation-fill-mode: both;
+			-ms-animation-duration: 1s;
+			-ms-animation-delay: .2s;
+			-ms-animation-timing-function: ease;
+			-ms-animation-fill-mode: both;
+			-o-animation-duration: 1s;
+			-o-animation-delay: .2s;
+			-o-animation-timing-function: ease;
+			-o-animation-fill-mode: both;
+			animation-duration: 1s;
+			animation-delay: .2s;
+			animation-timing-function: ease;
+			animation-fill-mode: both;
+		}
+		#gdpt-shoutbox{position: fixed;bottom: 30px;right: 30px;background:#f0f0f0;background:rgb(255,255,255,.8);box-shadow:0px 0px 15px rgba(0,0,0,.33)}
+		.gdpt-sb-hd{line-height:20px;height: 20px;text-shadow: 0 0 4px #fff;text-align: center;cursor: pointer;background: #2189ff;position: relative;}
+		.gdpt-sb-title{width:6em;color: #fff;font-weight:bold;font-family:"微软雅黑";position: absolute;left:50%;margin-left:-3em;}
+		.gdpt-sb-bd{position: absolute;top:20px;bottom:84px;left:0;right:0;}
+		.gdpt-sb-ft{position: absolute;bottom:0;height:80px;left:0;right:0;overflow:hidden;}
+		.gdpt-sb-ipt{width:100%;margin:0;padding:0;*width:90%;}
+		.gdpt-bar{height:24px;line-height:24px;margin:5px 24px;}
+		.gdpt-bar-btn{text-decoration: none;float: right;margin-left:10px;line-height:22px;height:22px;padding:0 6px;border:1px solid #0069e2;background:#2189ff;box-shadow:0 1px 0 rgba(255, 255, 255, 0.2) inset,1px 1px 1px rgba(0, 0, 0, 0.29);display:inline-block;text-align:center;color:#fff;cursor:pointer;font-size:12px;text-shadow: 0 0 3px plum;text-decoration: none;}
+		.gdpt-bar-btn:hover{background-image:-webkit-linear-gradient(-90deg, #2495ff,#1d7aff 20%);background-image:-moz-linear-gradient(-90deg, #2495ff,#1d7aff 20%);background-image:-o-linear-gradient(-90deg, #2495ff,#1d7aff 20%);background-image:linear-gradient(180deg, #2495ff,#1d7aff 20%);box-shadow:0 1px 0 rgba(255, 255, 255, 0.47) inset,1px 1px 1px rgba(0, 0, 0, 0.29);}
+		.gdpt-bar-btn:active{background-image:-webkit-linear-gradient(-90deg, #1767ff,#2aa9ff);background-image:-moz-linear-gradient(-90deg, #1767ff,#2aa9ff);background-image:-o-linear-gradient(-90deg, #1767ff,#2aa9ff);background-image:linear-gradient(180deg, #1767ff,#2aa9ff);box-shadow:0 1px 0 rgba(255, 255, 255, 0.22) inset,1px 1px 1px rgba(0, 0, 0, 0.29);}
+		.gdptbar-btn.disabled{background:#b8b8b8;color:#fff;border-color:#a4a4a4;cursor:default;box-shadow:0 1px 0 #939393 inset;}
+		.gdpt-bar-btn{}
+		.gdpt-sb-btn{background: url(style/images/gdpt-sprite.png);height: 20px;float: right;width: 28px;margin: 0;-webkit-tap-highlight-color: rgba(6,6,6,0.3);}
+		.gdpt-sb-close{background-position: 0 -40px;width: 39px;}
+		.gdpt-sb-close:hover{background-position: 0 0}
+		.gdpt-sb-max{background-position: 0 -120px;}
+		.gdpt-sb-max:hover{background-position: 0 -80px}
+		.gdpt-sb-min{background-position: 0 -200px;}
+		.gdpt-sb-min:hover{background-position: 0 -160px}
+		.gdpt-sb-restore{background-position: 0 -280px;}
+		.gdpt-sb-restore:hover{background-position: 0 -240px}
+
+
+		.gdpt-btn{position:fixed;right:30px;bottom:0;}
+		/*.gdpt-btn{position:fixed;right: 30px;bottom:0;height: 30px;line-height:30px;padding: 0 30px;background:#e5e5e5;cursor: pointer;text-shadow:0 0 3px rgba(0,0,0,.5);color:#000;color:rgba(255,0,0,.99);color:red\9;_height:20px;_padding-top:10px;}*/
+
+		.ui-resizable { position: absolute;}
+		.ui-resizable-handle { position: absolute;font-size: 0.1px;z-index: 99999; display: block;}
+		.ui-resizable-disabled .ui-resizable-handle, .ui-resizable-autohide .ui-resizable-handle { display: none; }
+		.ui-resizable-n { cursor: n-resize; height: 7px; width: 100%; top: -5px; left: 0px; }
+		.ui-resizable-s { cursor: s-resize; height: 7px; width: 100%; bottom: -5px; left: 0px; }
+		.ui-resizable-e { cursor: e-resize; width: 7px; right: -5px; top: 0px; height: 100%; }
+		.ui-resizable-w { cursor: w-resize; width: 7px; left: -5px; top: 0px; height: 100%; }
+		.ui-resizable-se { cursor: se-resize; width: 12px; height: 12px; right: 1px; bottom: 1px; }
+		.ui-resizable-sw { cursor: sw-resize; width: 9px; height: 9px; left: -5px; bottom: -5px; }
+		.ui-resizable-nw { cursor: nw-resize; width: 9px; height: 9px; left: -5px; top: -5px; }
+		.ui-resizable-ne { cursor: ne-resize; width: 9px; height: 9px; right: -5px; top: -5px;}
+
+		.gdpt-sb-hd{_cursor: default;}
+		.gdpt-btn,#gdpt-shoutbox{_position:absolute;}
+		.gdpt-sb-restore,.gdpt-sb-min,.gdpt-sb-max{_display: none;}
+		.gdpt-sb-close{_background:none;_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='http://remiel.me/style/images/gdpt-ie6-close.png')}
+
+	</style>
+</head>
+<body>
+
+	<div class="gdpt-shoutbox" id='gdpt-shoutbox' style="width:720px;height:300px;">
+		<div class="gdpt-sb-hd">
+			<a href="javascript:;" class="gdpt-sb-btn gdpt-sb-close" title=""></a>
+			<a href="javascript:;" class="gdpt-sb-btn gdpt-sb-max" title=""></a>
+			<!-- <a href="javascript:;" class="gdpt-sb-btn gdpt-sb-restore" title=""></a> -->
+			<a href="javascript:;" class="gdpt-sb-btn gdpt-sb-min" title=""></a>
+			<div class="gdpt-sb-title">群 聊 区</div>
+		</div>
+		<div class="gdpt-sb-bd">
+			<!-- <iframe src="http://pt.gdut.edu.cn/shoutbox.php?type=shoutbox" width="100%" height="100%" frameborder="0"></iframe> -->
+		</div>
+		<div class="gdpt-sb-ft">
+			<div class="gdpt-bar">
+				<input type="text" class="gdpt-sb-ipt">
+			</div>
+			<div class="gdpt-bar">
+				<a href="" class="gdpt-bar-btn">教学</a>
+				<a href="" class="gdpt-bar-btn">清空</a>
+				<a href="" class="gdpt-bar-btn">对游客</a>
+				<a href="" class="gdpt-bar-btn">我吼</a>
+			</div>
+		</div>
+	</div>
+	<a class="gdpt-btn gdpt-bar-btn">群聊区</a>
+
+	<script type="text/javascript" src="../js/jquery.js"></script>
+
+	<script type="text/javascript" src="../js/jquery-ui-1.8.9.js"></script>
+	<!-- gdpt -->
+	<script>
+		function testAnim(x) {
+			$('#gdpt-shoutbox').removeClass().addClass(x);
+			var wait = window.setTimeout( function(){
+				$('#gdpt-shoutbox').removeClass()},
+				1300
+			);
+		}
+		$(document).ready(function(){
+			var waitAni;
+			var aniIn=["flash", "bounce", "shake", "tada", "swing", "wobble", "wiggle", "pulse", "flip", "flipInX","flipInY", "fadeIn", "fadeInUp", "fadeInDown", "fadeInLeft", "fadeInRight", "fadeInUpBig", "fadeInDownBig", "fadeInLeftBig", "fadeInRightBig", "bounceIn", "bounceInDown", "bounceInUp", "bounceInLeft", "bounceInRight", "rotateIn", "rotateInDownLeft", "rotateInDownRight", "rotateInUpLeft", "rotateInUpRight", "lightSpeedIn", "rollIn"]
+			var aniOut=["flipOutX",  "flipOutY",, "fadeOut", "fadeOutUp", "fadeOutDown", "fadeOutLeft", "fadeOutRight", "fadeOutUpBig", "fadeOutDownBig", "fadeOutLeftBig", "fadeOutRightBig", "bounceOut", "bounceOutDown", "bounceOutUp", "bounceOutLeft", "bounceOutRight", "rotateOut", "rotateOutDownLeft", "rotateOutDownRight", "rotateOutUpLeft", "rotateOutUpRight", "lightSpeedOut", "hinge", "rollOut"]
+			$('.gdpt-btn').click(function(){
+				clearTimeout(waitAni);
+				$('.gdpt-btn').fadeOut(100);
+				if(document.all){
+					$('#gdpt-shoutbox').fadeIn(300);
+				}else{
+					$('#gdpt-shoutbox').show();
+				}
+				testAnim(aniIn[Math.random(0,aniIn.length)]);
+			});
+			$('.gdpt-sb-close').click(function(){
+				testAnim(aniOut[Math.random(0,aniOut.length)]);
+				if(document.all){
+					$('#gdpt-shoutbox').fadeOut(300);
+				}else{
+					waitAni = window.setTimeout(function(){
+						$('#gdpt-shoutbox').hide();
+					},1300);
+				}
+				$('.gdpt-btn').fadeIn(100);
+			});
+			$('.gdpt-sb-max').click(function(){
+				$('#gdpt-shoutbox').css({left:'30px',right:'30px',top:'30px',bottom:'30px',width:'auto',height:'auto'})
+			});
+			$('.gdpt-sb-min').click(function(){
+				$('#gdpt-shoutbox').css({left:'auto',right:'30px',top:'auto',bottom:'30px',width:'650px',height:'240px'})
+			});
+		});
+		if ($.browser.msie && ($.browser.version == "6.0") && !$.support.style){
+			$('#gdpt-shoutbox').draggable( "disable" );
+			$("#gdpt-shoutbox").resizable( "disable" );
+		}else{
+			$('#gdpt-shoutbox').draggable({ cancel: '.gdpt-sb-bd,.gdpt-bar' });
+			$("#gdpt-shoutbox").resizable({ handles: "n, e, s, w, sw, se, nw, ne" , minHeight: 240 ,minWidth: 650});
+		}
+
+		var native_random = Math.random;
+		Math.random = function(a, b, c) {
+		    if (arguments.length === 0)
+		        return native_random();
+		    arguments.length === 1 && (b = a, a = 0);
+		    var d = a + native_random() * (b - a);
+		    return c === void 0 ? Math.round(d) : d.toFixed(c)
+		}
+	</script>
+
+	<!--[if lt IE 10 ]>
+	
+	<![endif]-->
+</body>
+</html>

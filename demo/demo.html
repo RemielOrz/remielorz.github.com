@@ -1,0 +1,936 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>demo</title>
+<link href="css/style.css" rel="stylesheet" media="screen" type="text/css" />
+<link href="css/colorbox.css" rel="stylesheet" media="screen" type="text/css" />
+<script language="javascript" type="text/javascript" src="js/jquery.js"></script>
+<script src="http://bdimg.share.baidu.com/static/js/logger.js?cdnversion=378175"></script>
+<link href="http://bdimg.share.baidu.com/static/css/bdsstyle.css?cdnversion=20121228" rel="stylesheet" type="text/css">
+</head>
+
+<body scroll="no">
+
+<div id="colorbox" class="" style="padding-bottom: 0px; padding-right: 0px; top: 0px; left: 133px; position: fixed; width: 1100px; height: 685px;">
+	<div id="cboxWrapper" style="height: 685px; width: 1100px;">
+		<div>
+			<div id="cboxTopLeft" style="float: left;">
+			</div>
+			<div id="cboxTopCenter" style="float: left; width: 1100px;">
+			</div>
+			<div id="cboxTopRight" style="float: left;">
+			</div>
+		</div>
+		<div style="clear: left;">
+			<div id="cboxMiddleLeft" style="float: left; height: 685px;">
+			</div>
+			<div id="cboxContent" style="float: left; width: 1100px; height: 685px;">
+				<div id="cboxLoadedContent" style="width: 1100px; overflow: auto; height: 685px;">
+					<div class="din-detail">
+						<div class="din-image has-scrollbar">
+							<div class="content" hidefocus="true" ondblclick="document.selection ? document.selection.empty() : window.getSelection().removeAllRanges(); return false"
+							onclick="document.selection ? document.selection.empty() : window.getSelection().removeAllRanges(); return false"
+							tabindex="0" style="right: -17px;">
+								<img id="pinImage" alt="2013-02-21 11:26:48f0359d风光摄影" data-src="" src="http://img01.dincool.com/1302/21/246_7354_f4823d97.jpg"
+								onload="LazyLoad(this);" style="width:750px;height:500px;margin-top:92.5px;">
+							</div>
+							<div class="din-previous">
+								<a href="javascript:;">
+								</a>
+							</div>
+							<div class="din-next">
+								<a href="javascript:;">
+								</a>
+							</div>
+							<div class="din-info-ctrl din-info-hide">
+								<a href="javascript:;">
+								</a>
+							</div>
+							<div class="din-tool">
+								<div class="din-tool-box cf">
+									<div class="din-action">
+										<a data-value="79498" class="redin" href="javascript:;" id="action-redin">
+											转叮
+										</a>
+										<a data-value="79498" class="likedin" like-action="Like" href="javascript:;"
+										id="action_like">
+											喜欢
+										</a>
+										<a href="javascript:;" class="reportdin">举报</a>
+										<a href="javascript:;" class="editdin" style="display:none">编辑</a>
+									</div>
+									<div class="din-share">
+									</div>
+								</div>
+							</div>
+							<div id="cboxClose" style="float: left;">
+								关闭
+							</div>
+							<div class="pane" style="display: none;">
+								<div class="slider" style="height: 668px;">
+								</div>
+							</div>
+						</div>
+						<div class="din-info">
+							<div class="din-wrap">
+								<div class="bd has-scrollbar" style="height: 286px;">
+									<div class="accordion content" tabindex="0" style="right: -17px;">
+										<div class="mod_user_info">
+											<a class="avatar" href="/user/f0359d" target="_blank" title="❤❤">
+												<img src="http://img01.dincool.com/profilepic/f9823b115da39995fcd25c5fb1d6b4766801557088_64.jpg"
+												border="0">
+											</a>
+											<div class="mod_user_name">
+												<p>
+													<a href="/user/f0359d" target="_blank" title="❤❤">
+														❤❤
+													</a>
+												</p>
+												<p>
+													<a id="user_follow_action" data-value="246" href="javascript:;" follow-action="Follow"
+													class="btn WhiteBtn LongBtn">
+														<strong>
+															关注
+														</strong>
+														<span>
+														</span>
+													</a>
+												</p>
+											</div>
+										</div>
+										<div class="mod_pin_desc">
+											<p>
+												风光摄影
+											</p>
+											<p class="gray">
+												<span>
+													3小时前
+												</span>
+												<span>
+													来自
+													<a href="/go/?din_id=79498" target="_blank">
+														zhan.renren.com
+													</a>
+												</span>
+											</p>
+										</div>
+										<div class="share-tools">
+											<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare" data="{'url':'http://www.dincool.com/dins/79498'}">
+												<span class="bds_more">
+													分享到：
+												</span>
+												<a class="bds_qzone" title="分享到QQ空间" href="#">
+												</a>
+												<a class="bds_tsina" title="分享到新浪微博" href="#">
+												</a>
+												<a class="bds_tqq" title="分享到腾讯微博" href="#">
+												</a>
+												<a class="bds_renren" title="分享到人人网" href="#">
+												</a>
+												<a class="bds_t163" title="分享到网易微博" href="#">
+												</a>
+												<a class="shareCount" href="#" title="累计分享0次">
+													0
+												</a>
+											</div>
+										</div>
+										<div class="mod_repin">
+											<div class="mod_repin_title accordion_hander" uri="/mod/redin?id=79498">
+												<span>
+													<label id="mod_redin_counter">
+														0
+													</label>
+													次转叮
+												</span>
+											</div>
+											<div class="mod_repin_list accordion_content">
+											</div>
+										</div>
+										<div class="mod_like">
+											<div class="mod_like_title accordion_hander" uri="/mod/dinlikers?id=79498">
+												<span>
+													<label id="mod_likedin_counter">
+														0
+													</label>
+													个喜欢
+												</span>
+											</div>
+											<div class="mod_likedin_list accordion_content">
+											</div>
+										</div>
+										<div class="mod_comments">
+											<div class="mod_comments_title accordion_hander" uri="/mod/comments?id=79498&amp;type=all">
+												<span>
+													<label id="mod_comments_counter">
+														0
+													</label>
+													条评论
+												</span>
+											</div>
+											<div class="mod_comments_list accordion_content">
+												<ul>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="mod_comment_box">
+										<div class="avatar">
+											<img src="/images/share/avatar.gif">
+										</div>
+										<div class="comment_input">
+											<div class="wrap">
+												<input type="hidden" name="pin_id" value="79498">
+												<input type="hidden" name="re_comment_uid" value="0">
+												<textarea name="add_comment_text" title="写些评语。。。" placeholder="写些评语。。。" class="textInput uiNoOutline uiTextareaNoResize">写些评语。。。</textarea>
+											</div>
+											<span class="UFICommentTip dcg dss">
+												<span>
+													按“Enter”键发布评论。
+												</span>
+											</span>
+										</div>
+									</div>
+									<div class="pane" style="display: none;">
+										<div class="slider" style="height: 270px;">
+										</div>
+									</div>
+								</div>
+								<div class="fd">
+									<div class="mod_board_pins">
+										<div class="mod_board_pins_ttl">
+											<a href="/boards/1256" target="_blank">
+												默认图板
+											</a>
+											的其他图叮
+										</div>
+										<div class="mod_board_pins_list">
+											<div class="mod_board_pins_next">
+												<em>
+												</em>
+											</div>
+											<div class="mod_board_pins_prev">
+												<em>
+												</em>
+											</div>
+											<div class="mod_board_pins_content">
+												<ul style="width: 7410px; margin-left: 0px;">
+													<li>
+														<a href="/dins/79787?colorbox=1" title="韩国风景图片" data-pin-id="79787">
+															<img src="http://img01.dincool.com/1302/21/246_7039_dab903e8_64.jpeg"
+															style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79786?colorbox=1" title="台湾风景图片_百度图片" data-pin-id="79786">
+															<img src="http://img01.dincool.com/1302/21/246_7032_2fc11570_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79785?colorbox=1" title="奥格斯堡风景图片_百度图片" data-pin-id="79785">
+															<img src="http://img01.dincool.com/1302/21/246_7026_31aa3611_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79784?colorbox=1" title="京都风景" data-pin-id="79784">
+															<img src="http://img01.dincool.com/1302/21/246_7019_459a68f2_64.jpeg"
+															style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79783?colorbox=1" title="心形,花环,黑色背景,沙滩_百度图片" data-pin-id="79783">
+															<img src="http://img01.dincool.com/1302/21/246_7010_74a8bef7_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79782?colorbox=1" title="间歇泉,岩石构造" data-pin-id="79782">
+															<img src="http://img01.dincool.com/1302/21/246_7006_31f1516f_64.jpeg"
+															style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79780?colorbox=1" title="马尔代夫_百度图片" data-pin-id="79780">
+															<img src="http://img01.dincool.com/1302/21/246_6999_941f4334_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79778?colorbox=1" title="欧冠，布斯克茨VS帕齐尼，" data-pin-id="79778">
+															<img src="http://img01.dincool.com/1302/21/246_6882_7512c52c_64.gif" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79771?colorbox=1" title="阿尔卑斯山,日出,上巴伐利亚,德国" data-pin-id="79771">
+															<img src="http://img01.dincool.com/1302/21/246_6822_7c83fc8a_64.jpeg"
+															style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79762?colorbox=1" title="清晨的丽江 - 谁的等待恰逢花开采集到梦走廊 - 花瓣_百度图片"
+														data-pin-id="79762">
+															<img src="http://img01.dincool.com/1302/21/246_6810_44807635_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79741?colorbox=1" title="园林风景图片_百度图片" data-pin-id="79741">
+															<img src="http://img01.dincool.com/1302/21/246_6652_0757cef8_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79739?colorbox=1" title="伦敦塔桥风景图片_百度图片" data-pin-id="79739">
+															<img src="http://img01.dincool.com/1302/21/246_6641_40d757b0_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79738?colorbox=1" title="梦时代摩天轮风景图片_百度图片" data-pin-id="79738">
+															<img src="http://img01.dincool.com/1302/21/246_6633_2738dc3a_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79735?colorbox=1" title="柏林风景图片_百度图片" data-pin-id="79735">
+															<img src="http://img01.dincool.com/1302/21/246_6462_54a37e73_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79729?colorbox=1" title="黑色,漂石,海滩_百度图片" data-pin-id="79729">
+															<img src="http://img01.dincool.com/1302/21/246_6200_75d281d9_64.jpeg"
+															style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79728?colorbox=1" title="间歇泉,黄石公园_百度图片" data-pin-id="79728">
+															<img src="http://img01.dincool.com/1302/21/246_6195_78d50a87_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79727?colorbox=1" title="年轻,情侣,制作,心形,闪闪发光,夜晚" data-pin-id="79727">
+															<img src="http://img01.dincool.com/1302/21/246_6185_e1b031f7_64.jpeg"
+															style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79726?colorbox=1" title="手掌,日落,上方,海滩,帕尔玛,加纳利群岛,西班牙,欧洲_百度图片"
+														data-pin-id="79726">
+															<img src="http://img01.dincool.com/1302/21/246_6174_59bf10ff_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79725?colorbox=1" title="三塔倒影公园风景图片_百度图片" data-pin-id="79725">
+															<img src="http://img01.dincool.com/1302/21/246_6169_df1d1a27_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79724?colorbox=1" title="建筑,美景,北京_百度图片" data-pin-id="79724">
+															<img src="http://img01.dincool.com/1302/21/246_6163_158fbcea_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79710?colorbox=1" title="Hello Kitty方便面，连杯方便面也卖萌啦，真心可爱啊！"
+														data-pin-id="79710">
+															<img src="http://img01.dincool.com/1302/21/246_6063_2bad1023_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79702?colorbox=1" title="蔷薇花开 by 小红马 主题展区_网易摄影_百度图片" data-pin-id="79702">
+															<img src="http://img01.dincool.com/1302/21/246_6038_d7925fd6_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79700?colorbox=1" title="建筑" data-pin-id="79700">
+															<img src="http://img01.dincool.com/1302/21/246_6002_861780d0_64.jpeg"
+															style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79699?colorbox=1" title="荷花02图片[摄影图,JPG]_百度图片" data-pin-id="79699">
+															<img src="http://img01.dincool.com/1302/21/246_5993_0551587c_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79698?colorbox=1" title="海面日出图片[设计图,JPG]_百度图片" data-pin-id="79698">
+															<img src="http://img01.dincool.com/1302/21/246_5986_7125ebdf_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79696?colorbox=1" title="日本台場图片_百度图片" data-pin-id="79696">
+															<img src="http://img01.dincool.com/1302/21/246_5980_bd4c5572_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79695?colorbox=1" title="茶马古道图片_百度图片" data-pin-id="79695">
+															<img src="http://img01.dincool.com/1302/21/246_5951_39c9f636_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79694?colorbox=1" title="山溪瀑布" data-pin-id="79694">
+															<img src="http://img01.dincool.com/1302/21/246_5946_720e8e6b_64.jpeg"
+															style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79693?colorbox=1" title="北海道风景图片_百度图片" data-pin-id="79693">
+															<img src="http://img01.dincool.com/1302/21/246_5935_23129f1d_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79691?colorbox=1" title="重庆风景图片_百度图片" data-pin-id="79691">
+															<img src="http://img01.dincool.com/1302/21/246_5917_311e233d_64.jpeg"
+															style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79690?colorbox=1" title="海滩_百度图片" data-pin-id="79690">
+															<img src="http://img01.dincool.com/1302/21/246_5913_d2d9aca9_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79689?colorbox=1" title="温泉_百度图片" data-pin-id="79689">
+															<img src="http://img01.dincool.com/1302/21/246_5907_276ede8b_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79688?colorbox=1" title="杨贵妃墓风景" data-pin-id="79688">
+															<img src="http://img01.dincool.com/1302/21/246_5902_f5e3e2c5_64.jpeg"
+															style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79687?colorbox=1" title="山,山脉,树,遮盖,日落_百度图片" data-pin-id="79687">
+															<img src="http://img01.dincool.com/1302/21/246_5892_eefa44e8_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79686?colorbox=1" title="渔船,海洋,日落,毛伊岛,夏威夷,美国_百度图片" data-pin-id="79686">
+															<img src="http://img01.dincool.com/1302/21/246_5884_76336f5c_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79684?colorbox=1" title="泸西风景图片_百度图片" data-pin-id="79684">
+															<img src="http://img01.dincool.com/1302/21/246_5844_98ad484a_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79683?colorbox=1" title="回形针做的埃菲尔铁塔，膜拜手工帝！" data-pin-id="79683">
+															<img src="http://img01.dincool.com/1302/21/246_5812_cb220906_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79667?colorbox=1" title="建设祖国摄影哈士奇照片集中贴_百度图片" data-pin-id="79667">
+															<img src="http://img01.dincool.com/1302/21/246_5552_e94fd532_64.jpeg"
+															style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79666?colorbox=1" title="猫叔_百度图片" data-pin-id="79666">
+															<img src="http://img01.dincool.com/1302/21/246_5549_7488f1b4_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79665?colorbox=1" title="绵羊,站立,地点_百度图片" data-pin-id="79665">
+															<img src="http://img01.dincool.com/1302/21/246_5529_b055f5e8_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79664?colorbox=1" title="【可爱】可爱的小兔兔_看图_可爱图片吧_百度贴吧_百度图片"
+														data-pin-id="79664">
+															<img src="http://img01.dincool.com/1302/21/246_5525_a9d512c4_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79663?colorbox=1" title="泰迪熊犬保障纯种健康 价格合_百度图片" data-pin-id="79663">
+															<img src="http://img01.dincool.com/1302/21/246_5523_8ad05ae3_64.gif" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79662?colorbox=1" title="萨摩耶犬_百度百科_百度图片" data-pin-id="79662">
+															<img src="http://img01.dincool.com/1302/21/246_5520_c0c30780_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79661?colorbox=1" title="狗狗_百度图片" data-pin-id="79661">
+															<img src="http://img01.dincool.com/1302/21/246_5516_a001db61_64.jpeg"
+															style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79660?colorbox=1" title="【吱吱】喵星人勿进_其实我们很有爱吧_百度贴吧_百度图片"
+														data-pin-id="79660">
+															<img src="http://img01.dincool.com/1302/21/246_5512_d0807d2e_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79658?colorbox=1" title="海南风景图片_百度图片" data-pin-id="79658">
+															<img src="http://img01.dincool.com/1302/21/246_5494_599efad4_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79656?colorbox=1" title="悲了个催……" data-pin-id="79656">
+															<img src="http://img01.dincool.com/1302/21/246_5430_f27cd9df_64.gif" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79654?colorbox=1" title="北京市莲花池_百度图片" data-pin-id="79654">
+															<img src="http://img01.dincool.com/1302/21/246_5370_fb416872_64.jpeg"
+															style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79653?colorbox=1" title="鼓浪屿_百度图片" data-pin-id="79653">
+															<img src="http://img01.dincool.com/1302/21/246_5362_f92d1c46_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79652?colorbox=1" title="香港_百度图片" data-pin-id="79652">
+															<img src="http://img01.dincool.com/1302/21/246_5359_d5e9f993_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79651?colorbox=1" title="苏格兰斯凯岛的仙女池_百度图片" data-pin-id="79651">
+															<img src="http://img01.dincool.com/1302/21/246_5350_2a11c039_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79650?colorbox=1" title="埃菲尔铁塔风景图片_百度图片" data-pin-id="79650">
+															<img src="http://img01.dincool.com/1302/21/246_5337_1456d8bc_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79649?colorbox=1" title="黄帝故里风景图片_百度图片" data-pin-id="79649">
+															<img src="http://img01.dincool.com/1302/21/246_5332_06c7b0cf_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79648?colorbox=1" title="楼观台森林公园风景图片_百度图片" data-pin-id="79648">
+															<img src="http://img01.dincool.com/1302/21/246_5324_6b799d5d_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79646?colorbox=1" title="楼观台森林公园风景图片_百度图片" data-pin-id="79646">
+															<img src="http://img01.dincool.com/1302/21/246_5310_c4c47514_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79645?colorbox=1" title="法兰克福风景图片_百度图片" data-pin-id="79645">
+															<img src="http://img01.dincool.com/1302/21/246_5301_7aea9aff_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79643?colorbox=1" title="装的是满满的可爱" data-pin-id="79643">
+															<img src="http://img01.dincool.com/1302/21/246_5204_146fb06d_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79641?colorbox=1" title="别怀疑这些货真的是口袋妖怪，从NO.1妙蛙种子开始，刺瞎双眼的画风，未完待续"
+														data-pin-id="79641">
+															<img src="http://img01.dincool.com/1302/21/246_5195_240dba5e_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79640?colorbox=1" title="别怀疑这些货真的是口袋妖怪，从NO.1妙蛙种子开始，刺瞎双眼的画风，未完待续"
+														data-pin-id="79640">
+															<img src="http://img01.dincool.com/1302/21/246_5193_5dd00962_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79639?colorbox=1" title="别怀疑这些货真的是口袋妖怪，从NO.1妙蛙种子开始，刺瞎双眼的画风，未完待续"
+														data-pin-id="79639">
+															<img src="http://img01.dincool.com/1302/21/246_5192_4120da07_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79638?colorbox=1" title="别怀疑这些货真的是口袋妖怪，从NO.1妙蛙种子开始，刺瞎双眼的画风，未完待续"
+														data-pin-id="79638">
+															<img src="http://img01.dincool.com/1302/21/246_5190_e81d5e2d_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79637?colorbox=1" title="别怀疑这些货真的是口袋妖怪，从NO.1妙蛙种子开始，刺瞎双眼的画风，未完待续"
+														data-pin-id="79637">
+															<img src="http://img01.dincool.com/1302/21/246_5188_45ec253a_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79636?colorbox=1" title="别怀疑这些货真的是口袋妖怪，从NO.1妙蛙种子开始，刺瞎双眼的画风，未完待续"
+														data-pin-id="79636">
+															<img src="http://img01.dincool.com/1302/21/246_5186_357fc3df_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79635?colorbox=1" title="别怀疑这些货真的是口袋妖怪，从NO.1妙蛙种子开始，刺瞎双眼的画风，未完待续"
+														data-pin-id="79635">
+															<img src="http://img01.dincool.com/1302/21/246_5184_e24f78b0_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79634?colorbox=1" title="别怀疑这些货真的是口袋妖怪，从NO.1妙蛙种子开始，刺瞎双眼的画风，未完待续"
+														data-pin-id="79634">
+															<img src="http://img01.dincool.com/1302/21/246_5180_21829800_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79631?colorbox=1" title="我看到这包装，瞬间碉堡了" data-pin-id="79631">
+															<img src="http://img01.dincool.com/1302/21/246_5050_16d31a03_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79630?colorbox=1" title="孩子，你要开学了。" data-pin-id="79630">
+															<img src="http://img01.dincool.com/1302/21/246_5026_396e486c_64.gif" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79629?colorbox=1" title="你对我好，我自然也会对你好。就这么简单。。。" data-pin-id="79629">
+															<img src="http://img01.dincool.com/1302/21/246_4993_b59d6186_64.gif" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79628?colorbox=1" title="无节操的人类！老纸的形象就是被你们破坏的！！" data-pin-id="79628">
+															<img src="http://img01.dincool.com/1302/21/246_4987_ba9b8ee5_64.gif" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79627?colorbox=1" title="亲！拍照要微笑哦！喵~~" data-pin-id="79627">
+															<img src="http://img01.dincool.com/1302/21/246_4977_de2ed12c_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79624?colorbox=1" title="新的一天，从亲亲开始！" data-pin-id="79624">
+															<img src="http://img01.dincool.com/1302/21/246_4898_f5e4a576_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79623?colorbox=1" title="要不是主人拉着我，早揍你了！" data-pin-id="79623">
+															<img src="http://img01.dincool.com/1302/21/246_4892_bc10d6ce_64.gif" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79622?colorbox=1" title="看我神一般的跳跃！ ........... 哎呀 我去......"
+														data-pin-id="79622">
+															<img src="http://img01.dincool.com/1302/21/246_4875_d75c6e04_64.gif" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79621?colorbox=1" title="之前做的尚酷 很帅的车型 小钢炮" data-pin-id="79621">
+															<img src="http://img01.dincool.com/1302/21/246_4847_bbaa51f9_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79619?colorbox=1" title="之前做的尚酷 很帅的车型 小钢炮" data-pin-id="79619">
+															<img src="http://img01.dincool.com/1302/21/246_4793_41897a6d_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79618?colorbox=1" title="之前做的尚酷 很帅的车型 小钢炮" data-pin-id="79618">
+															<img src="http://img01.dincool.com/1302/21/246_4790_a39e37f2_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79617?colorbox=1" title="之前做的尚酷 很帅的车型 小钢炮" data-pin-id="79617">
+															<img src="http://img01.dincool.com/1302/21/246_4782_3cb0a8b1_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79499?colorbox=1" title="ordo_ab_chao采集到搞笑_百度图片" data-pin-id="79499">
+															<img src="http://img01.dincool.com/1302/21/246_7366_ed86487d_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79497?colorbox=1" title="风光摄影" data-pin-id="79497">
+															<img src="http://img01.dincool.com/1302/21/246_7352_f4a3a88f_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79496?colorbox=1" title="风光摄影" data-pin-id="79496">
+															<img src="http://img01.dincool.com/1302/21/246_7349_466e3ed2_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79495?colorbox=1" title="风光摄影" data-pin-id="79495">
+															<img src="http://img01.dincool.com/1302/21/246_7347_1762936b_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79494?colorbox=1" title="风光摄影" data-pin-id="79494">
+															<img src="http://img01.dincool.com/1302/21/246_7344_460cfe34_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79493?colorbox=1" title="风光摄影" data-pin-id="79493">
+															<img src="http://img01.dincool.com/1302/21/246_7343_e0d602c5_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79489?colorbox=1" title="宝丽来的世界 - 人人小站" data-pin-id="79489">
+															<img src="http://img01.dincool.com/1302/21/246_7259_ce891896_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79488?colorbox=1" title="宝丽来的世界 - 人人小站" data-pin-id="79488">
+															<img src="http://img01.dincool.com/1302/21/246_7255_222e28fb_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79487?colorbox=1" title="宝丽来的世界 - 人人小站" data-pin-id="79487">
+															<img src="http://img01.dincool.com/1302/21/246_7252_f8ce741d_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79484?colorbox=1" title="这是note2，我的新手机，喜欢它有10..._百度图片"
+														data-pin-id="79484">
+															<img src="http://img01.dincool.com/1302/21/246_7193_f035e200_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79482?colorbox=1" title="Bill Boy_百度图片" data-pin-id="79482">
+															<img src="http://img01.dincool.com/1302/21/246_7108_fc111c04_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79480?colorbox=1" title="就是这眼神，大爱啊！毫无抵抗能力！！！_百度图片" data-pin-id="79480">
+															<img src="http://img01.dincool.com/1302/21/246_7101_f792cd31_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79479?colorbox=1" title="光线浓醇宛若天堂" data-pin-id="79479">
+															<img src="http://img01.dincool.com/1302/21/246_7089_0b364323_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79478?colorbox=1" title="光线浓醇宛若天堂" data-pin-id="79478">
+															<img src="http://img01.dincool.com/1302/21/246_7087_63de3501_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79477?colorbox=1" title="光线浓醇宛若天堂" data-pin-id="79477">
+															<img src="http://img01.dincool.com/1302/21/246_7084_6b5c16f0_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79476?colorbox=1" title="Theo Gosselin，法国摄影师，他的作品多以人像为主，生活化气息很浓。这组作品中充满着暖色调的阳光，让人感觉到生活的浪漫。"
+														data-pin-id="79476">
+															<img src="http://img01.dincool.com/1302/21/246_7051_fd6d0e6f_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79475?colorbox=1" title="Theo Gosselin，法国摄影师，他的作品多以人像为主，生活化气息很浓。这组作品中充满着暖色调的阳光，让人感觉到生活的浪漫。"
+														data-pin-id="79475">
+															<img src="http://img01.dincool.com/1302/21/246_7046_8240173d_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79474?colorbox=1" title="Theo Gosselin，法国摄影师，他的作品多以人像为主，生活化气息很浓。这组作品中充满着暖色调的阳光，让人感觉到生活的浪漫。"
+														data-pin-id="79474">
+															<img src="http://img01.dincool.com/1302/21/246_7043_6e9d4c35_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79473?colorbox=1" title="Theo Gosselin，法国摄影师，他的作品多以人像为主，生活化气息很浓。这组作品中充满着暖色调的阳光，让人感觉到生活的浪漫。"
+														data-pin-id="79473">
+															<img src="http://img01.dincool.com/1302/21/246_7042_1b1b260d_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79472?colorbox=1" title="Theo Gosselin，法国摄影师，他的作品多以人像为主，生活化气息很浓。这组作品中充满着暖色调的阳光，让人感觉到生活的浪漫。"
+														data-pin-id="79472">
+															<img src="http://img01.dincool.com/1302/21/246_7040_bfbe41c0_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79471?colorbox=1" title="Theo Gosselin，法国摄影师，他的作品多以人像为主，生活化气息很浓。这组作品中充满着暖色调的阳光，让人感觉到生活的浪漫。"
+														data-pin-id="79471">
+															<img src="http://img01.dincool.com/1302/21/246_7037_1cb8db84_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79469?colorbox=1" title="Theo Gosselin，法国摄影师，他的作品多以人像为主，生活化气息很浓。这组作品中充满着暖色调的阳光，让人感觉到生活的浪漫。"
+														data-pin-id="79469">
+															<img src="http://img01.dincool.com/1302/21/246_7035_29821efa_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79468?colorbox=1" title="Theo Gosselin，法国摄影师，他的作品多以人像为主，生活化气息很浓。这组作品中充满着暖色调的阳光，让人感觉到生活的浪漫。"
+														data-pin-id="79468">
+															<img src="http://img01.dincool.com/1302/21/246_7033_d3d50d5e_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79467?colorbox=1" title="Theo Gosselin，法国摄影师，他的作品多以人像为主，生活化气息很浓。这组作品中充满着暖色调的阳光，让人感觉到生活的浪漫。"
+														data-pin-id="79467">
+															<img src="http://img01.dincool.com/1302/21/246_7031_76d838ab_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79466?colorbox=1" title="Theo Gosselin，法国摄影师，他的作品多以人像为主，生活化气息很浓。这组作品中充满着暖色调的阳光，让人感觉到生活的浪漫。"
+														data-pin-id="79466">
+															<img src="http://img01.dincool.com/1302/21/246_7028_2846f73e_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79465?colorbox=1" title="Theo Gosselin，法国摄影师，他的作品多以人像为主，生活化气息很浓。这组作品中充满着暖色调的阳光，让人感觉到生活的浪漫。"
+														data-pin-id="79465">
+															<img src="http://img01.dincool.com/1302/21/246_7026_6bb924e9_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79464?colorbox=1" title="Theo Gosselin，法国摄影师，他的作品多以人像为主，生活化气息很浓。这组作品中充满着暖色调的阳光，让人感觉到生活的浪漫。"
+														data-pin-id="79464">
+															<img src="http://img01.dincool.com/1302/21/246_7023_3cc3c4d5_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79463?colorbox=1" title="Theo Gosselin，法国摄影师，他的作品多以人像为主，生活化气息很浓。这组作品中充满着暖色调的阳光，让人感觉到生活的浪漫。"
+														data-pin-id="79463">
+															<img src="http://img01.dincool.com/1302/21/246_7021_3428432c_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79462?colorbox=1" title="风景摄影作品" data-pin-id="79462">
+															<img src="http://img01.dincool.com/1302/21/246_7009_d6208d6c_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79460?colorbox=1" title="风景摄影作品" data-pin-id="79460">
+															<img src="http://img01.dincool.com/1302/21/246_7000_9426bb7b_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79459?colorbox=1" title="风景摄影作品" data-pin-id="79459">
+															<img src="http://img01.dincool.com/1302/21/246_6997_0a01a78e_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79458?colorbox=1" title="悬浮的青春" data-pin-id="79458">
+															<img src="http://img01.dincool.com/1302/21/246_6986_1a48d2ea_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79457?colorbox=1" title="悬浮的青春" data-pin-id="79457">
+															<img src="http://img01.dincool.com/1302/21/246_6984_83f377be_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79456?colorbox=1" title="悬浮的青春" data-pin-id="79456">
+															<img src="http://img01.dincool.com/1302/21/246_6983_b6f17f0e_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79454?colorbox=1" title="悬浮的青春" data-pin-id="79454">
+															<img src="http://img01.dincool.com/1302/21/246_6923_4a8b9a81_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79453?colorbox=1" title="悬浮的青春" data-pin-id="79453">
+															<img src="http://img01.dincool.com/1302/21/246_6922_d2d5bee9_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+													<li>
+														<a href="/dins/79451?colorbox=1" title="悬浮的青春" data-pin-id="79451">
+															<img src="http://img01.dincool.com/1302/21/246_6920_b0b229da_64.jpg" style="width:64px;height:64px;">
+														</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="mod_small_pins">
+										<div class="mod_small_pins_ttl">
+											源自
+											<span>
+												zhan.renren.com
+											</span>
+											的图叮
+										</div>
+										<div class="mod_small_pins_list">
+											<ul>
+												<li>
+													<a href="/dins/79850" target="_blank" title="天气转凉，心跳呼吸正常">
+														<img src="http://img01.dincool.com/1302/21/44_8736_efe339b5_55.jpg" style="width:42px;height:42px;margin-left:0px;margin-top:0px;">
+													</a>
+												</li>
+												<li>
+													<a href="/dins/79776" target="_blank" title="别墅">
+														<img src="http://img01.dincool.com/1302/21/23_6829_c64187c7_55.jpg" style="width:42px;height:42px;margin-left:0px;margin-top:0px;">
+													</a>
+												</li>
+												<li>
+													<a href="/dins/79775" target="_blank" title="别墅">
+														<img src="http://img01.dincool.com/1302/21/23_6827_7d6a2ecb_55.jpg" style="width:42px;height:42px;margin-left:0px;margin-top:0px;">
+													</a>
+												</li>
+												<li>
+													<a href="/dins/79774" target="_blank" title="别墅">
+														<img src="http://img01.dincool.com/1302/21/23_6826_470ef514_55.jpg" style="width:42px;height:42px;margin-left:0px;margin-top:0px;">
+													</a>
+												</li>
+												<li>
+													<a href="/dins/79773" target="_blank" title="别墅">
+														<img src="http://img01.dincool.com/1302/21/23_6824_ebaadfdf_55.jpg" style="width:42px;height:42px;margin-left:0px;margin-top:0px;">
+													</a>
+												</li>
+												<li>
+													<a href="/dins/79772" target="_blank" title="别墅">
+														<img src="http://img01.dincool.com/1302/21/23_6823_56ad36e6_55.jpg" style="width:42px;height:42px;margin-left:0px;margin-top:0px;">
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="cboxTitle" style="float: left; display: none;">
+					风光摄影
+				</div>
+				<div id="cboxCurrent" style="float: left; display: block;">
+					image 1 of 30
+				</div>
+				<div id="cboxNext" style="float: left; display: block;">
+					next
+				</div>
+				<div id="cboxPrevious" style="float: left; display: none;">
+					previous
+				</div>
+				<div id="cboxSlideshow" style="float: left; display: none;">
+				</div>
+			</div>
+			<div id="cboxMiddleRight" style="float: left; height: 685px;">
+			</div>
+		</div>
+		<div style="clear: left;">
+			<div id="cboxBottomLeft" style="float: left;">
+			</div>
+			<div id="cboxBottomCenter" style="float: left; width: 1100px;">
+			</div>
+			<div id="cboxBottomRight" style="float: left;">
+			</div>
+		</div>
+	</div>
+	<div style="position: absolute; width: 9999px; visibility: hidden; display: none;">
+	</div>
+</div>
+
+
+<script>
+	(function(){
+			var pinImageMargin,pinImageHeight,pinImageWidth;
+			$('.din-info-ctrl').click(function(){
+				if($(this).hasClass('din-info-show')){
+					$(this).addClass('din-info-hide').removeClass('din-info-show');
+					$('.din-info').show();
+					$('.din-image').css('width','');
+					$('#pinImage').css({'marginTop':pinImageMargin,'height':pinImageHeight,'width':pinImageWidth});
+				}else{
+					$(this).addClass('din-info-show').removeClass('din-info-hide');
+					$('.din-info').hide();
+					$('.din-image').css('width','100%');
+					pinImageMargin=$('#pinImage').css('marginTop');
+					pinImageHeight=$('#pinImage').css('height');
+					pinImageWidth=$('#pinImage').css('width');
+					$('#pinImage').css({'marginTop':0,'height':'auto','width':'100%'});
+				}
+			})
+		})()
+</script>
+</body>
+</html>

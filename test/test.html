@@ -14,7 +14,7 @@
 	<script>
 		var data_;
 		$('button').click(function(){
-			$.ajax({
+			/*$.ajax({
 				type:"Post",
 				url:"test.xml",
 				success: function (data) {
@@ -27,7 +27,7 @@
 					$(".data").html("请求失败!");
 					console.log("悲剧")
 				}
-			})
+			})*/
 			// $.getJSON("1.json",function(d){
 			// 	console.log(d)
 			// });
@@ -37,7 +37,41 @@
 			// $('.data').load('test.xml',function(s){
 			// 	console.log(s)
 			// })
+
+			/*$('.data').load('gdpt.html .gdpt-shoutbox',
+				function(responseText, textStatus, XMLHttpRequest){
+					//this;
+					//console.log(responseText, textStatus, XMLHttpRequest)
+				}
+			)*/
+
+			$.get('1.json',function(data, textStatus){
+				this;
+				alert(data);
+				console.log(this)
+			})
 		})
 	</script>
 </body>
 </html>
+
+<script language="javascript" type="text/javascript" src="/js/jquery.js"></script>
+<script language="javascript" type="text/javascript" src="/js/jquery/masonry.js"></script>
+<script language="javascript" type="text/javascript" src="/js/jquery/infinitescroll.js"></script>
+<script language="javascript" type="text/javascript" src="/js/jquery/nanoscroller.js"></script>
+<script language="javascript" type="text/javascript" src="/js/jquery/dragsort.js"></script>
+<script language="javascript" type="text/javascript" src="/js/query/cookie.js"></script>
+<script language="javascript" type="text/javascript" src="/js/jquery/colorbox.js"></script>
+<script language="javascript" type="text/javascript" src="/js/jquery/alertbox.js"></script>
+<script language="javascript" type="text/javascript" src="/js/charCount.js"></script>
+<script language="javascript" type="text/javascript" src="/js/dincool.ui.js"></script>
+<script language="javascript" type="text/javascript" src="/js/base.js"></script>
+<script language="javascript" type="text/javascript" src="/js/view-mypage.js"></script>
+<script src="http://l.tbcdn.cn/apps/top/x/sdk.js?appkey=21371659"></script>
+<script type="text/javascript">
+var ROOTPATH = 'http://www.dincool.com/';
+var WS_URL = '/ws/call.php';
+var app = app || {};
+app['user'] = {"uid":0};
+app['boards'] = [];
+</script>
