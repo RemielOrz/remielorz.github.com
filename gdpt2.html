@@ -12,7 +12,7 @@
 			/*background: #000000; */
 			color: #666666;
 			line-height: 1.25em;
-			height: 100%;
+			height: 600px;
 			width: 100%;
 			position: relative;
 			font-size: 12px;
@@ -40,11 +40,10 @@
 			animation-timing-function: ease;
 			animation-fill-mode: both;
 		}
-		#gdpt-shoutbox{position: fixed;background:#f0f0f0;background:rgb(255,255,255,.8);box-shadow:0px 0px 15px rgba(0,0,0,.33)}
+		#gdpt-shoutbox{position: fixed;bottom: 30px;right: 30px;background:#f0f0f0;background:rgb(255,255,255,.8);box-shadow:0px 0px 15px rgba(0,0,0,.33)}
 		.gdpt-sb-hd{line-height:20px;height: 20px;text-shadow: 0 0 4px #fff;text-align: center;cursor: pointer;background: #2189ff;position: relative;}
 		.gdpt-sb-title{width:6em;color: #fff;font-weight:bold;font-family:"微软雅黑";position: absolute;left:50%;margin-left:-3em;}
 		.gdpt-sb-bd{position: absolute;top:20px;bottom:84px;left:0;right:0;}
-		.gdpt-sb-bd iframe{position:relative;z-index:-1;}
 		.gdpt-sb-ft{position: absolute;bottom:0;height:80px;left:0;right:0;overflow:hidden;}
 		.gdpt-sb-ipt{width:100%;margin:0;padding:0;*width:90%;}
 		.gdpt-bar{height:24px;line-height:24px;margin:5px 24px;}
@@ -65,7 +64,7 @@
 
 
 		.gdpt-btn{position:fixed;right:30px;bottom:0;}
-
+		/*.gdpt-btn{position:fixed;right: 30px;bottom:0;height: 30px;line-height:30px;padding: 0 30px;background:#e5e5e5;cursor: pointer;text-shadow:0 0 3px rgba(0,0,0,.5);color:#000;color:rgba(255,0,0,.99);color:red\9;_height:20px;_padding-top:10px;}*/
 
 		.ui-resizable { position: absolute;}
 		.ui-resizable-handle { position: absolute;font-size: 0.1px;z-index: 99999; display: block;}
@@ -88,7 +87,7 @@
 </head>
 <body>
 
-	<div class="gdpt-shoutbox" id='gdpt-shoutbox' style="width:750px;height:300px;display: none;">
+	<div class="gdpt-shoutbox" id='gdpt-shoutbox' style="width:720px;height:300px;display: none;">
 		<div class="gdpt-sb-hd">
 			<a href="javascript:;" class="gdpt-sb-btn gdpt-sb-close" title=""></a>
 			<a href="javascript:;" class="gdpt-sb-btn gdpt-sb-max" title=""></a>
@@ -97,7 +96,7 @@
 			<div class="gdpt-sb-title">群 聊 区</div>
 		</div>
 		<div class="gdpt-sb-bd">
-			<iframe src="http://pt.gdut.edu.cn/shoutbox.php?type=shoutbox" width="100%" height="100%" frameborder="0"></iframe>
+			<!-- <iframe src="http://pt.gdut.edu.cn/shoutbox.php?type=shoutbox" width="100%" height="100%" frameborder="0"></iframe> -->
 		</div>
 		<div class="gdpt-sb-ft">
 			<div class="gdpt-bar">
@@ -154,7 +153,7 @@
 				$('#gdpt-shoutbox').css({left:'30px',right:'30px',top:'30px',bottom:'30px',width:'auto',height:'auto'})
 			});
 			$('.gdpt-sb-min').click(function(){
-				$('#gdpt-shoutbox').css({left:sbPosLeft + 'px',right:'auto',top:sbPosTop + 'px',bottom:'auto',width:'650px',height:'240px'})
+				$('#gdpt-shoutbox').css({left:'auto',right:'30px',top:'auto',bottom:'30px',width:'650px',height:'240px'})
 			});
 		});
 		if ($.browser.msie && ($.browser.version == "6.0") && !$.support.style){
@@ -164,17 +163,6 @@
 			$('#gdpt-shoutbox').draggable({ cancel: '.gdpt-sb-bd,.gdpt-bar' });
 			$("#gdpt-shoutbox").resizable({ handles: "n, e, s, w, sw, se, nw, ne" , minHeight: 240 ,minWidth: 650});
 		}
-
-		var sbPosLeft,sbPosTop;
-		var position = function(){
-			sbPosLeft = $(window).width() - 680;
-			sbPosTop = $(window).height() - 270;
-		}
-		position();
-		$(window).resize(function(){
-			position();
-		});
-		$('#gdpt-shoutbox').css({left:(sbPosLeft - 100) + 'px',top:(sbPosTop - 60) + 'px'});
 
 		var native_random = Math.random;
 		Math.random = function(a, b, c) {
