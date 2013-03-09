@@ -28,4 +28,4 @@ EOF
 chmod +x ~/.vnc/xstartup
 chkconfig vncserver on
 
-wget https://addons.mozilla.org/firefox/downloads/file/151606/vagex_firefox_add_on-1.4.1-fx+fn+sm+an.xpi
+wget http://vagex.com/vagex_add_on-1.5.7.xpi
