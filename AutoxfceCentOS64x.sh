@@ -28,4 +28,4 @@ EOF
 chmod +x ~/.vnc/xstartup
 chkconfig vncserver on
 
-wget http://vagex.com/vagex_add_on-1.5.7.xpi
+wget http://vagex.com/vagex_add_on-1.6.1.xpi
