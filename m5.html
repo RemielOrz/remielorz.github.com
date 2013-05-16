@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta property="wb:webmaster" content="35c917eaf521e11d" />
+	<title></title>
+	<link rel="stylesheet" href="style/animate.css">
+	<style type="text/css">
+		*{margin: 0;padding: 0}
+		a{text-decoration: none;}
+		html, body {
+			text-align: center;
+			margin:0;
+			padding:0; 
+			color: #666666;
+			line-height: 1.25em;
+			height: 100%;
+			width: 100%;
+			position: relative;
+			font-size: 12px;
+		}
+		body{background:url(5.gif) repeat;}
+		#outer {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 1px;
+			height: 1px;
+			overflow: visible;
+		}		
+		#canvasContainer { 
+			position: absolute;
+		}
+		#output {
+			position:absolute;
+			bottom:0;
+			font-family: Arial, Helvetica, sans-serif; 
+			font-size: 0.75em;
+			margin-top:4px;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div id="outer" style="display: none;">
+	    <div id="canvasContainer">
+	        <canvas id="mainCanvas"></canvas>
+	        <div id="output"></div>
+	    </div>
+	</div>
+
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/preloadjs-0.2.0.min.js"></script>
+	<script type="text/javascript" src="js/soundjs-0.3.0.min.js"></script>
+	<script type="text/javascript" src="js/CSSPlugin.js"></script>
+	<script type="text/javascript">
+
+	
+
+
+
+	function init2(){
+		// begin loading content (only sounds to load)
+		var manifest = [
+            // {id:"music", src:"http://f3.xiami.net/4/189/57089/478098/02_1770625900_2881483.mp3|http://f3.xiami.net/4/189/57089/478098/01_1770625899_2881482.mp3|http://f3.xiami.net/4/131/59831/485390/01_1770711694_2980769.mp3|./music/feelingtrust.ogg"}
+			{id:"music", src:"http://remiel.me/5.mp3"}
+		];
+
+		var preload;
+
+	    preload = new createjs.PreloadJS();
+	    //Install SoundJS as a plugin, then PreloadJS will initialize it automatically.
+	    preload.installPlugin(createjs.SoundJS);
+
+	    //Available PreloadJS callbacks
+	    preload.onFileLoad = function(event) {
+		    // Show the icon on loaded items.
+			//var div = document.getElementById(event.id);
+		    //div.style.backgroundImage = "url('assets/audioButtonSheet.png')";
+	    };
+		preload.onComplete = function(event) {
+			//document.getElementById("loader").className = "";
+		}
+
+	    //Load the manifest and pass 'true' to start loading immediately. Otherwise, you can call load() manually.
+	    preload.loadManifest(manifest, true);
+	    createjs.SoundJS.play("music");
+	}
+	init2()
+
+	</script>
+
+</body>
+</html>
