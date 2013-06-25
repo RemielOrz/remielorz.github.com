@@ -29,3 +29,5 @@ chmod +x ~/.vnc/xstartup
 chkconfig vncserver on
 
 wget http://vagex.com/vagex_add_on-1.6.1.xpi
+
+yum install vixie-cron crontabs;chkconfig crond on;service crond start ;crontab -e;i;
