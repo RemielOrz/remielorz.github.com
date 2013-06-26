@@ -1,12 +1,3 @@
-yum install vixie-cron crontabs
-
-chkconfig crond on
-
-service crond start
-
-crontab -e
-
-
 #!/bin/bash
 yum -y install vnc-server
 
