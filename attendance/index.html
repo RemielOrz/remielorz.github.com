@@ -1,0 +1,1988 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>考勤系统</title>
+    <!--<link rel="stylesheet" type="text/css" href="http://asset.gleasy.com/platform/os/assets/stylesheets/reset.css?v=121006">
+    <link rel="stylesheet" type="text/css" href="http://asset.gleasy.com/platform/os/assets/stylesheets/os/os-style.css?v=121221" media="all">
+    <link rel="stylesheet" type="text/css" href="http://asset.gleasy.com/platform/os/assets/stylesheets/os-desktop.css?v=121006" media="all">-->
+    <link rel="stylesheet" href="style/attendance.css">
+</head>
+<body>
+<!-- os G窗口, oWindow_current 当前窗口-->
+<div class="oWindow oWindow_current" style="top:0;left:0;width:1200px;height:554px;z-index:99;">
+    <!-- 标题栏 高24px -->
+    <div class="oWindowTop">
+        <div class="oWindowBtnBar">
+            <a href="" class="oWinBtn oWinMin" title="最小化"></a>
+            <a href="" class="oWinBtn oWinMax" title="最大化" style="display:none"></a>
+            <a href="" class="oWinBtn oWinRestore" title="还原" style="display:none"></a>
+            <a href="" class="oWinBtn oWinClose" title="关闭"></a>
+        </div>
+        <div class="oWindowTitle">考 勤</div>
+    </div>
+
+    <!-- 工具栏 -->
+    <div class="oWinToolBar"></div>
+     <div class="oWindowBody">
+       <!-- 考勤系统 -->
+        <div class="attendanceWrap administrator">
+            <aside class="aside">
+                <nav class="aNav">
+                    <ul class="aNavList">
+                        <li class="aNavList_li">打&nbsp;&nbsp;&nbsp;卡</li>
+                        <li class="aNavList_li">我的考勤</li>
+                        <li class="aNavList_li">考勤明细</li>
+                        <li class="aNavList_li">考勤统计</li>
+                        <li class="aNavList_li active">班次管理</li>
+                        <li class="aNavList_li">管&nbsp;理&nbsp;员</li>
+                    </ul>
+                </nav>
+                <dl class="adminList">
+                    <dt class="dt">管理员:</dt>
+                    <dd class="dd ico03"><a href="javascript:;">张三</a></dd>
+                    <dd class="dd ico03"><a href="javascript:;">张三三</a></dd>
+                </dl>
+            </aside>
+            <div class="content">
+                <!--打卡-->
+                <div class="box sign">
+                    <div class="calendar">
+                        <header class="header">2013年4月20日</header>
+                        <div class="date">20</div>
+                        <div class="week">星期四</div>
+                        <div class="chinaday">农历二月初一</div>
+                    </div>
+                    <ul class="signList">
+                        <li class="signList_li">
+                            <div class="td">
+                                <div>上班</div>
+                                <div>09 : 00</div>
+                            </div>
+                            <div class="td">09:00<span class="sec">:12</span></div>
+                            <div class="td">
+                                <span class="ico01">已签到</span>
+                            </div>
+                            <div class="td">
+                                <div class="ip">IP:192.168.192.192</div>
+                                <div class="ip">广州市越秀区先烈中路2号</div>
+                            </div>
+                        </li>
+                        <li class="signResult">迟到了6分钟  :(</li>
+                        <li class="signList_li">
+                            <div class="td">
+                                <div>下班</div>
+                                <div>18 : 00</div>
+                            </div>
+                            <div class="td">09:00<span class="sec">:12</span></div>
+                            <div class="td">
+                                <span class="ico01">已签到</span>
+                            </div>
+                            <div class="td">
+                                <a class="btn" href="javascript:;">签&nbsp;退</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="signList">
+                        <li class="signList_li">
+                            <div class="td">
+                                <div>上班</div>
+                                <div>09 : 00</div>
+                            </div>
+                            <div class="td">09:00<span class="sec">:12</span></div>
+                            <div class="td">
+                                <!--<span class="ico01">已签到</span>-->
+                            </div>
+                            <div class="td">
+                                <div>已超过签到时间</div>
+                            </div>
+                        </li>
+                        <li class="signResult">您已不幸旷工一天  :(</li>
+                        <li class="signList_li">
+                            <div class="td">
+                                <div>下班</div>
+                                <div>18 : 00</div>
+                            </div>
+                            <div class="td">09:00<span class="sec">:12</span></div>
+                            <div class="td">
+                                <span class="ico01">已签到</span>
+                            </div>
+                            <div class="td">
+                                <a class="btn" href="javascript:;">签&nbsp;退</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!--打卡 end-->
+                <!--我的考勤-->
+                <div class="box self">
+                    <header class="schBar header">
+                        <span class="span">考勤日期:</span>
+                        <input class="ipt datePicker_ipt" type="text" value="2013/03/03">
+                        <span>到</span>
+                        <input class="ipt datePicker_ipt" type="text" value="2013/03/03">
+                        <a href="javascipt:;">导出考勤</a>
+                    </header>
+                    <div class="inner">
+                        <div class="statusBar cf">
+                            <div class="status">
+                                <div class="bd">0</div>
+                            </div>
+                            <div class="status">
+                                <div class="bd">0</div>
+                                <div class="tooltip">1小时6分钟</div>
+                            </div>
+                            <div class="status">
+                                <div class="bd">0</div>
+                            </div>
+                            <div class="status">
+                                <div class="bd">0</div>
+                            </div>
+                            <div class="status">
+                                <div class="bd">0</div>
+                            </div>
+                        </div>
+                        <nav class="dNav cf">
+                            <a class="dNav_a active" href="javascript:;">全 部</a>
+                            <a class="dNav_a" href="javascript:;">全部异常</a>
+                            <a class="dNav_a" href="javascript:;">迟 到</a>
+                            <a class="dNav_a" href="javascript:;">早退旷工</a>
+                            <a class="dNav_a" href="javascript:;">未签退</a>
+                            <a class="dNav_a" href="javascript:;">加 班</a>
+                        </nav>
+                        <div class="tableWrap">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>日 期</th>
+                                        <th>类 型</th>
+                                        <th>打卡时间</th>
+                                        <th>状 态</th>
+                                        <th>处理结果</th>
+                                        <th>管理员备注</th>
+                                        <th>加班认可</th>
+                                        <th>打卡IP/地址</th>
+                                        <th>班 次</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div>2013/05/9</div>
+                                            <div>星期二</div>
+                                        </td>
+                                        <td>
+                                            <div>签 到</div>
+                                            <div>签 到</div>
+                                        </td>
+                                        <td>
+                                            <div>09:20</div>
+                                            <div>18:30</div>
+                                        </td>
+                                        <td>
+                                            <div>正 常</div>
+                                            <div class="highlight-orange">早退10分钟</div>
+                                        </td>
+                                        <td>
+                                            <div><a href="javascript:;">不记迟到</a></div>
+                                            <div>&nbsp;</div>
+                                        </td>
+                                        <td>
+                                            <div class="tdInner">记得赶紧补事假条给我</div>
+                                            <div class="tdInner">&nbsp;</div>
+                                        </td>
+                                        <td>
+                                            <a href="javascript:;">处 理</a>
+                                        </td>
+                                        <td>
+                                            <div class="tdInner">192.168.1.1/广州市越秀区先烈中路</div>
+                                            <div class="tdInner">192.168.1.1/广州市越秀区先烈中路</div>
+                                        </td>
+                                        <td>
+                                            <div>01</div>
+                                            <div>01</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div>2013/05/9</div>
+                                            <div>星期二</div>
+                                        </td>
+                                        <td>
+                                            <div>签 到</div>
+                                            <div class="highlight-green">未签退</div>
+                                        </td>
+                                        <td>
+                                            <div>09:20</div>
+                                            <div>18:30</div>
+                                        </td>
+                                        <td>
+                                            <div>正 常</div>
+                                            <div>正 常</div>
+                                        </td>
+                                        <td>
+                                            <div><a href="javascript:;">不记迟到</a></div>
+                                            <div>&nbsp;</div>
+                                        </td>
+                                        <td>
+                                            <div class="tdInner">记得赶紧补事假条给我</div>
+                                            <div class="tdInner">&nbsp;</div>
+                                        </td>
+                                        <td>
+                                            <a href="javascript:;">处 理</a>
+                                        </td>
+                                        <td>
+                                            <div class="tdInner">192.168.1.1/广州市越秀区先烈中路</div>
+                                            <div class="tdInner">192.168.1.1/广州市越秀区先烈中路</div>
+                                        </td>
+                                        <td>
+                                            <div>01</div>
+                                            <div>01</div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="pager">
+                            <button class="pagerFirst  disabled"></button>
+                            <button class="pagerPrev  disabled"></button>
+                            <span>第</span>
+                            <input type="text" class="pagerIpt">
+                            <span>/</span><span>2</span>
+                            <span>页</span>
+                            <button class="pagerNext"></button>
+                            <button class="pagerEnd"></button>
+                        </div>
+                    </div>
+                </div>
+                <!--我的考勤 end-->
+                <!--考勤明细-->
+                <div class="box detail">
+                    <header class="schBar header">
+                        <span class="span">考勤日期:</span>
+                        <input class="ipt datePicker_ipt" type="text" value="2013/03/03">
+                        <span>到</span>
+                        <input class="ipt datePicker_ipt" type="text" value="2013/03/03">
+                        <div class="dropBox">所有部门</div>
+                        <input class="ipt" type="text" placeholder="员工名称">
+                        <a class="btn2" href="javascript:;">搜&nbsp;索</a>
+                        <a href="javascipt:;">导出考勤</a>
+                    </header>
+                    <div class="bd">
+                        <div class="inner">
+                            <nav class="dNav cf">
+                                <a class="dNav_a active" href="javascript:;">全 部</a>
+                                <a class="dNav_a" href="javascript:;">全部异常</a>
+                                <a class="dNav_a" href="javascript:;">迟 到</a>
+                                <a class="dNav_a" href="javascript:;">早退旷工</a>
+                                <a class="dNav_a" href="javascript:;">未签退</a>
+                                <a class="dNav_a" href="javascript:;">加 班</a>
+                            </nav>
+                            <div class="tableWrap">
+                                <header class="header">
+                                    <table class="hAsideTable">
+                                        <thead>
+                                        <tr>
+                                            <th>名 称</th>
+                                        </tr>
+                                        </thead>
+                                    </table>
+                                    <table class="hMainTable">
+                                        <thead>
+                                        <tr>
+                                            <th>部 门</th>
+                                            <th>日 期</th>
+                                            <th>类 型</th>
+                                            <th>打卡时间</th>
+                                            <th>状 态</th>
+                                            <th>处理结果</th>
+                                            <th>管理员备注</th>
+                                            <th>加班认可</th>
+                                            <th>打卡IP/地址</th>
+                                            <th>班 次</th>
+                                        </tr>
+                                        </thead>
+                                    </table>
+                                </header>
+                                <aside class="aside">
+	                                <table class="aTable dividingLine">
+		                                <tbody>
+		                                <tr>
+			                                <td rowspan="3">
+				                                <div class="tdInner">贝克汉姆</div>
+			                                </td>
+			                                <td class="nth-child-2"></td>
+			                                <!-- <td class="nth-child-2"></td> 占位用-->
+		                                </tr>
+		                                <tr>
+			                                <!--<td></td>-->
+			                                <td class="nth-child-2"></td>
+		                                </tr>
+		                                <tr>
+			                                <!--<td></td>-->
+			                                <td class="nth-child-2"></td>
+		                                </tr>
+		                                </tbody>
+	                                </table>
+	                                <table class="aTable">
+		                                <tbody>
+		                                <tr>
+			                                <td>贝克汉姆</td>
+			                                <td class="nth-child-2"></td>
+		                                </tr>
+		                                </tbody>
+	                                </table>
+                                    <table class="aTable dividingLine">
+                                        <tbody>
+                                        <tr>
+                                            <td rowspan="2">
+                                                <div class="tdInner">remiel</div>
+                                            </td>
+                                            <td class="nth-child-2"></td>
+                                        </tr>
+                                        <tr>
+                                            <!--<td></td>-->
+                                            <td class="nth-child-2"></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="aTable dividingLine">
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="tdInner">张三</div>
+                                            </td>
+                                            <td class="nth-child-2"></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </aside>
+                                <div class="main">
+                                    <table class="mTable dividingLine">
+                                        <tbody>
+                                        <tr>
+                                            <td class="nth-child-1" rowspan="3">
+                                                <div class="tdInner">设计部设计部设计部设计部设计部设计部设计部设计部设计部设计部设计部设计部</div>
+                                            </td>
+                                            <td class="nth-child-2" rowspan="3">
+                                                <div>2013/05/9</div>
+                                                <div>星期二</div>
+                                            </td>
+                                            <td class="nth-child-3">
+                                                <div>签 到</div>
+                                                <div>签 到</div>
+                                            </td>
+                                            <td class="nth-child-4">
+                                                <div>09:20</div>
+                                                <div>18:30</div>
+                                            </td>
+                                            <td class="nth-child-5">
+                                                <div>正 常</div>
+                                                <div>正 常</div>
+                                            </td>
+                                            <td class="nth-child-6">
+                                                <div class="detailResult">
+	                                                <span>不记迟到</span>
+	                                                <a href="javascript:;" class="undo">撤销</a>
+	                                                <a href="javascript:;" class="handle" style="display: none;">处 理</a>
+                                                </div>
+                                                <div class="detailResult">
+	                                                <a href="javascript:;" class="handle">处 理</a>
+                                                </div>
+                                            </td>
+                                            <td class="nth-child-7">
+                                                <div class="tdInner">记得赶紧补事假条给我</div>
+                                                <div class="tdInner">&nbsp;</div>
+                                            </td>
+                                            <td class="nth-child-8" rowspan="3">
+                                                <a href="javascript:;" class="overtimeHandle">处 理</a>
+                                            </td>
+                                            <td class="nth-child-9">
+                                                <div class="tdInner">192.168.1.1/广州市越秀区先烈中路</div>
+                                                <div class="tdInner">192.168.1.1/广州市越秀区先烈中路</div>
+                                            </td>
+                                            <td class="nth-child-10">
+                                                <div>01</div>
+                                                <div>01</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <!--<td class="nth-child-1"></td>-->
+                                            <!--<td class="nth-child-2"></td>-->
+                                            <td class="nth-child-3"></td>
+                                            <td class="nth-child-4"></td>
+                                            <td class="nth-child-5"></td>
+                                            <td class="nth-child-6"></td>
+                                            <td class="nth-child-7">
+	                                            <div class="tdInner">
+		                                            <span>记得赶紧补事假条给我</span>
+		                                            <a class="btn" href="javascript:;">改</a>
+	                                            </div>
+	                                            <div class="tdInner modify">
+		                                            <input class="ipt" type="text"/>
+		                                            <a class="btn" href="javascript:;">OK</a>
+		                                            <i class="del"></i>
+	                                            </div>
+                                            </td>
+                                            <!--<td class="nth-child-8"></td>-->
+                                            <td class="nth-child-9"></td>
+                                            <td class="nth-child-10"></td>
+                                        </tr>
+                                        <tr>
+                                            <!--<td class="nth-child-1"></td>-->
+                                            <!--<td class="nth-child-2"></td>-->
+                                            <td class="nth-child-3"></td>
+                                            <td class="nth-child-4"></td>
+                                            <td class="nth-child-5"></td>
+                                            <td class="nth-child-6"></td>
+                                            <td class="nth-child-7">
+	                                            <div class="tdInner">记得赶紧补事假条给我</div>
+	                                            <div class="tdInner"><a href="javascript:;">添加</a></div>
+                                            </td>
+                                            <!--<td class="nth-child-8"></td>-->
+                                            <td class="nth-child-9"></td>
+                                            <td class="nth-child-10"></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="mTable">
+	                                    <tbody>
+                                        <tr>
+                                            <td class="nth-child-1">
+                                                <div class="tdInner">设计部设计部设计部设计部设计部设计部设计部设计部设计部设计部设计部设计部</div>
+                                            </td>
+                                            <td class="nth-child-2">
+                                                <div>2013/05/9</div>
+                                                <div>星期二</div>
+                                            </td>
+                                            <td class="nth-child-3"></td>
+                                            <td class="nth-child-4"></td>
+                                            <td class="nth-child-5">
+                                                <div class="highlight-red">迟到40分钟</div>
+                                                <div class="highlight-red">早退40分钟</div>
+                                            </td>
+                                            <td class="nth-child-6">
+	                                            <div class="detailResult">
+		                                            <span>不记迟到</span>
+		                                            <a href="javascript:;" class="undo">撤销</a>
+		                                            <a href="javascript:;" class="handle" style="display: none;">处 理</a>
+	                                            </div>
+	                                            <div class="detailResult">
+		                                            <a href="javascript:;" class="handle">处 理</a>
+	                                            </div>
+                                            </td>
+                                            <td class="nth-child-7"></td>
+                                            <td class="nth-child-8">
+	                                            <div>加班半小时</div>
+                                            </td>
+                                            <td class="nth-child-9"></td>
+                                            <td class="nth-child-10"></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="mTable dividingLine">
+                                        <tbody>
+                                        <tr>
+                                            <td class="nth-child-1" rowspan="2"></td>
+                                            <td class="nth-child-2"></td>
+                                            <td class="nth-child-3"></td>
+                                            <td class="nth-child-4"></td>
+                                            <td class="nth-child-5"></td>
+                                            <td class="nth-child-6"></td>
+                                            <td class="nth-child-7"></td>
+                                            <td class="nth-child-8" rowspan="2"></td>
+                                            <td class="nth-child-9"></td>
+                                            <td class="nth-child-10"></td>
+                                        </tr>
+                                        <tr>
+                                            <!--<td class="nth-child-1"></td>-->
+                                            <td class="nth-child-2"></td>
+                                            <td class="nth-child-3"></td>
+                                            <td class="nth-child-4"></td>
+                                            <td class="nth-child-5"></td>
+                                            <td class="nth-child-6"></td>
+                                            <td class="nth-child-7"></td>
+                                            <!--<td class="nth-child-8"></td>-->
+                                            <td class="nth-child-9"></td>
+                                            <td class="nth-child-10"></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="mTable dividingLine">
+                                        <tbody>
+                                        <tr>
+                                            <td class="nth-child-1"></td>
+                                            <td class="nth-child-2"></td>
+                                            <td class="nth-child-3"></td>
+                                            <td class="nth-child-4"></td>
+                                            <td class="nth-child-5"></td>
+                                            <td class="nth-child-6"></td>
+                                            <td class="nth-child-7"></td>
+                                            <td class="nth-child-8"></td>
+                                            <td class="nth-child-9"></td>
+                                            <td class="nth-child-10"></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!--禁用加class disabled -->
+                            <div class="pager">
+                                <button class="pagerFirst  disabled"></button>
+                                <button class="pagerPrev  disabled"></button>
+                                <span>第</span>
+                                <input type="text" class="pagerIpt">
+                                <span>/</span><span>2</span>
+                                <span>页</span>
+                                <button class="pagerNext"></button>
+                                <button class="pagerEnd"></button>
+                            </div>
+                        </div>
+
+                        <!--加班认可处理-->
+                        <div class="popup overtimeWindow">
+	                        <input class="ipt" type="text">
+	                        <div class="dropBox" data-value="1">分钟</div>
+	                        <a class="btn" href="javascript:;">确定</a>
+	                        <i class="close"></i>
+                        </div>
+                        <!--加班认可处理 end-->
+                    </div>
+                </div>
+                <!--考勤明细 end-->
+                <!--考勤统计-->
+                <div class="box statistics">
+                    <header class="schBar header">
+                        <span class="span">考勤日期:</span>
+                        <input class="ipt datePicker_ipt" type="text" value="2013/03/03">
+                        <span>到</span>
+                        <input class="ipt datePicker_ipt" type="text" value="2013/03/03">
+                        <div class="dropBox">所有部门</div>
+                        <input class="ipt" type="text" placeholder="员工名称">
+                        <a class="btn2" href="javascript:;">搜&nbsp;索</a>
+                        <a href="javascipt:;">导出考勤</a>
+                    </header>
+                    <div class="inner">
+                        <div class="tableWrap">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>员 工</th>
+                                    <th>迟 到</th>
+                                    <th>早 退</th>
+                                    <th>旷 工</th>
+                                    <th>未签退</th>
+                                    <th>加 班</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="tdInner">张三</div>
+                                    </td>
+                                    <td>无</td>
+                                    <td><a href="javascript:;">1小时6分钟（9次）</a></td>
+                                    <td>无</td>
+                                    <td><a href="javascript:;">9次</a></td>
+                                    <td><a href="javascript:;">1小时6分钟（9次）</a></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="pager">
+                            <button class="pagerFirst  disabled"></button>
+                            <button class="pagerPrev  disabled"></button>
+                            <span>第</span>
+                            <input type="text" class="pagerIpt">
+                            <span>/</span><span>2</span>
+                            <span>页</span>
+                            <button class="pagerNext"></button>
+                            <button class="pagerEnd"></button>
+                        </div>
+                    </div>
+                </div>
+                <!--考勤统计 end-->
+                <!--班次管理-->
+                <div class="box manage" style="display: block;">
+                    <header class="header">
+                        <div class="tab">员工班次</div>
+                        <div class="tab active">添加管理/班次</div>
+                        <div class="tab">排&nbsp;班</div>
+                    </header>
+                    <!--员工班次-->
+                    <div class="bd schedule">
+                        <div class="inner">
+                            <div class="schBar">
+                                <span class="span">排班年月:</span>
+                                <div class="timeIpt jYear">
+                                    <input class="tIpt" type="text" />
+                                    <a class="up" href="javascript:;"></a>
+                                    <a class="down" href="javascript:;"></a>
+                                </div>
+                                <div class="timeIpt jMonth">
+                                    <input class="tIpt" type="text"/>
+                                    <a class="up" href="javascript:;"></a>
+                                    <a class="down" href="javascript:;"></a>
+                                </div>
+                                <div class="dropBox">所有部门</div>
+                                <input class="ipt" type="text" placeholder="员工名称"/>
+                                <a class="btn2" href="javascript:;">搜&nbsp;索</a>
+                                <a href="javascipt:;">导出考勤</a>
+                            </div>
+                            <div class="bar">
+                                <!--按钮灰显状态 加class: disabled-->
+                                <a class="btn2" href="javascript:;">排班选中</a>
+                                <a class="btn2" href="javascript:;">清空选中</a>
+                            </div>
+                            <div class="tableWrap">
+                                <header class="header">
+                                    <table class="hAsideTable">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>名 称</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                    <table class="hMainTable">
+                                        <thead>
+                                            <tr>
+                                                <th>部门</th>
+                                                <th>1号</th>
+                                                <th>2号</th>
+                                                <th>3号</th>
+                                                <th>4号</th>
+                                                <th>5号</th>
+                                                <th>6号</th>
+                                                <th>7号</th>
+                                                <th>8号</th>
+                                                <th>9号</th>
+                                                <th>10号</th>
+                                                <th>11号</th>
+                                                <th>12号</th>
+                                                <th>13号</th>
+                                                <th>14号</th>
+                                                <th>15号</th>
+                                                <th>16号</th>
+                                                <th>17号</th>
+                                                <th>18号</th>
+                                                <th>19号</th>
+                                                <th>20号</th>
+                                                <th>21号</th>
+                                                <th>22号</th>
+                                                <th>23号</th>
+                                                <th>24号</th>
+                                                <th>25号</th>
+                                                <th>26号</th>
+                                                <th>27号</th>
+                                                <th>28号</th>
+                                                <th>29号</th>
+                                                <th>30号</th>
+                                                <th>31号</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </header>
+                                <aside class="aside">
+                                    <table class="aTable">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" class="checkbox"/>
+                                                </td>
+                                                <td>贝克汉姆</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" class="checkbox"/>
+                                                </td>
+                                                <td>贝克汉姆</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" class="checkbox"/>
+                                                </td>
+                                                <td>贝克汉姆</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" class="checkbox"/>
+                                                </td>
+                                                <td>贝克汉姆</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" class="checkbox"/>
+                                                </td>
+                                                <td>贝克汉姆</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" class="checkbox"/>
+                                                </td>
+                                                <td>贝克汉姆</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" class="checkbox"/>
+                                                </td>
+                                                <td>贝克汉姆</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" class="checkbox"/>
+                                                </td>
+                                                <td>贝克汉姆</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" class="checkbox"/>
+                                                </td>
+                                                <td>贝克汉姆</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" class="checkbox"/>
+                                                </td>
+                                                <td>贝克汉姆</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" class="checkbox"/>
+                                                </td>
+                                                <td>贝克汉姆</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" class="checkbox"/>
+                                                </td>
+                                                <td>贝克汉姆</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" class="checkbox"/>
+                                                </td>
+                                                <td>贝克汉姆</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" class="checkbox"/>
+                                                </td>
+                                                <td>贝克汉姆</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" class="checkbox"/>
+                                                </td>
+                                                <td>贝克汉姆</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" class="checkbox"/>
+                                                </td>
+                                                <td>贝克汉姆</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" class="checkbox"/>
+                                                </td>
+                                                <td>贝克汉姆</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" class="checkbox"/>
+                                                </td>
+                                                <td>贝克汉姆</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" class="checkbox"/>
+                                                </td>
+                                                <td>贝克汉姆</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" class="checkbox"/>
+                                                </td>
+                                                <td>贝克汉姆</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </aside>
+                                <div class="main">
+                                    <table class="mTable">
+                                        <tbody>
+                                            <tr>
+                                                <td>设计部/A组/B小队</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>设计部/A组/B小队</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>设计部/A组/B小队</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>设计部/A组/B小队</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>设计部/A组/B小队</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>设计部/A组/B小队</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>设计部/A组/B小队</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>设计部/A组/B小队</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>设计部/A组/B小队</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>设计部/A组/B小队</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>设计部/A组/B小队</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>设计部/A组/B小队</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>设计部/A组/B小队</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>设计部/A组/B小队</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>设计部/A组/B小队</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>设计部/A组/B小队</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>设计部/A组/B小队</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>设计部/A组/B小队</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>设计部/A组/B小队</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>设计部/A组/B小队</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td>00001</td>
+                                                <td>00002</td>
+                                                <td>00003</td>
+                                                <td>00004</td>
+                                                <td>00005</td>
+                                                <td>00006</td>
+                                                <td>00007</td>
+                                                <td>00008</td>
+                                                <td>00009</td>
+                                                <td>00010</td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!--禁用加class disabled -->
+                            <div class="pager">
+                                <button class="pagerFirst  disabled"></button>
+                                <button class="pagerPrev  disabled"></button>
+                                <span>第</span>
+                                <input type="text" class="pagerIpt">
+                                <span>/</span><span>2</span>
+                                <span>页</span>
+                                <button class="pagerNext"></button>
+                                <button class="pagerEnd"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--员工班次 end-->
+                    <!--班次管理-->
+                    <div class="bd scheduleManage" style="display: block;" >
+                        <div class="inner">
+                            <aside class="aside">
+                                <nav class="smNav">
+                                    <a href="javascript:;" class="smNav_a active">全通勤班次</a>
+                                    <a href="javascript:;" class="smNav_a">早班</a>
+                                    <a href="javascript:;" class="smNav_a">早班</a>
+                                </nav>
+                                <a class="ico02" href="javascript:;">添加班次</a>
+                            </aside>
+                            <div class="smCont"  style="display: block;">
+                                <header class="smContHeader">
+                                    <label class="label" for="">班次编号</label>
+                                    <input type="text" class="ipt"/>
+                                    <label class="label" for="">班次名称</label>
+                                    <input type="text" class="ipt"/>
+                                    <a class="btn_del" href="javascript:;">删除班次</a>
+                                </header>
+                                <div class="hdbar">第一时间段
+                                    <a class="del" href="javascript:;"></a>
+                                </div>
+                                <div class="timeBox">
+                                    <div class="row">
+                                        <span>上班时间</span>
+                                        <div class="timeIpt jTime">
+                                            <input class="tIpt" type="text" value="09"/>
+                                            <input class="tIpt" type="text" value="44"/>
+                                            <a class="up" href="javascript:;"></a>
+                                            <a class="down" href="javascript:;"></a>
+                                        </div>
+                                        <span>提前</span>
+                                        <input class="ipt" type="text"/>
+                                        <span>分钟打卡有效</span>
+                                        <span>迟到</span>
+                                        <input class="ipt" type="text"/>
+                                        <span>分钟记旷工</span>
+                                        <div class="dropBox">1天</div>
+                                    </div>
+                                    <div class="row">
+                                        <span>上班时间</span>
+                                        <div class="timeIpt jTime">
+                                            <input class="tIpt" type="text" value="09"/>
+                                            <input class="tIpt" type="text" value="44"/>
+                                            <a class="up" href="javascript:;"></a>
+                                            <a class="down" href="javascript:;"></a>
+                                        </div>
+                                        <span>提前</span>
+                                        <input class="ipt" type="text"/>
+                                        <span>分钟打卡有效</span>
+                                        <span>迟到</span>
+                                        <input class="ipt" type="text"/>
+                                        <span>分钟记旷工</span>
+                                        <div class="dropBox">1天</div>
+                                    </div>
+                                </div>
+                                <div class="hdbar">第二时间段
+                                    <a class="del" href="javascript:;"></a>
+                                </div>
+                                <div class="timeBox">
+                                    <div class="row">
+                                        <span>上班时间</span>
+                                        <div class="timeIpt jTime">
+                                            <input class="tIpt" type="text" value="09"/>
+                                            <input class="tIpt" type="text" value="44"/>
+                                            <a class="up" href="javascript:;"></a>
+                                            <a class="down" href="javascript:;"></a>
+                                        </div>
+                                        <span>提前</span>
+                                        <input class="ipt" type="text"/>
+                                        <span>分钟打卡有效</span>
+                                        <span>迟到</span>
+                                        <input class="ipt" type="text"/>
+                                        <span>分钟记旷工</span>
+                                        <div class="dropBox">1天</div>
+                                    </div>
+                                    <div class="row">
+                                        <span>上班时间</span>
+                                        <div class="timeIpt jTime">
+                                            <input class="tIpt" type="text" value="09"/>
+                                            <input class="tIpt" type="text" value="44"/>
+                                            <a class="up" href="javascript:;"></a>
+                                            <a class="down" href="javascript:;"></a>
+                                        </div>
+                                        <span>提前</span>
+                                        <input class="ipt" type="text"/>
+                                        <span>分钟打卡有效</span>
+                                        <span>迟到</span>
+                                        <input class="ipt" type="text"/>
+                                        <span>分钟记旷工</span>
+                                        <div class="dropBox">1天</div>
+                                    </div>
+                                </div>
+                                <footer class="smContFooter">
+                                    <span>共需打2次卡，</span>
+                                    <a href="javascript:;">新增时间段</a>
+                                    <a class="btn" href="javascript:;">确 定</a>
+                                </footer>
+                            </div>
+                            <div class="smCont">
+                                <div class="hdbar">第二时间段
+                                    <a class="del" href="javascript:;"></a>
+                                </div>
+                                <div class="timeBox">
+                                    <div class="row">
+                                        <span>上班时间</span>
+                                        <div class="timeIpt jTime">
+                                            <input class="tIpt" type="text" value="09"/>
+                                            <input class="tIpt" type="text" value="44"/>
+                                            <a class="up" href="javascript:;"></a>
+                                            <a class="down" href="javascript:;"></a>
+                                        </div>
+                                        <span>提前</span>
+                                        <input class="ipt" type="text"/>
+                                        <span>分钟打卡有效</span>
+                                        <span>迟到</span>
+                                        <input class="ipt" type="text"/>
+                                        <span>分钟记旷工</span>
+                                        <div class="dropBox">1天</div>
+                                    </div>
+                                    <div class="row">
+                                        <span>上班时间</span>
+                                        <div class="timeIpt jTime">
+                                            <input class="tIpt" type="text" value="09"/>
+                                            <input class="tIpt" type="text" value="44"/>
+                                            <a class="up" href="javascript:;"></a>
+                                            <a class="down" href="javascript:;"></a>
+                                        </div>
+                                        <span>提前</span>
+                                        <input class="ipt" type="text"/>
+                                        <span>分钟打卡有效</span>
+                                        <span>迟到</span>
+                                        <input class="ipt" type="text"/>
+                                        <span>分钟记旷工</span>
+                                        <div class="dropBox">1天</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="smCont">
+                                <div class="hdbar">第二时间段
+                                    <a class="del" href="javascript:;"></a>
+                                </div>
+                                <div class="timeBox">
+                                    <div class="row">
+                                        <span>上班时间</span>
+                                        <div class="timeIpt jTime">
+                                            <input class="tIpt" type="text" value="09"/>
+                                            <input class="tIpt" type="text" value="44"/>
+                                            <a class="up" href="javascript:;"></a>
+                                            <a class="down" href="javascript:;"></a>
+                                        </div>
+                                        <span>提前</span>
+                                        <input class="ipt" type="text"/>
+                                        <span>分钟打卡有效</span>
+                                        <span>迟到</span>
+                                        <input class="ipt" type="text"/>
+                                        <span>分钟记旷工</span>
+                                        <div class="dropBox">1天</div>
+                                    </div>
+                                    <div class="row">
+                                        <span>上班时间</span>
+                                        <div class="timeIpt jTime">
+                                            <input class="tIpt" type="text" value="09"/>
+                                            <input class="tIpt" type="text" value="44"/>
+                                            <a class="up" href="javascript:;"></a>
+                                            <a class="down" href="javascript:;"></a>
+                                        </div>
+                                        <span>提前</span>
+                                        <input class="ipt" type="text"/>
+                                        <span>分钟打卡有效</span>
+                                        <span>迟到</span>
+                                        <input class="ipt" type="text"/>
+                                        <span>分钟记旷工</span>
+                                        <div class="dropBox">1天</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--班次管理 end-->
+                    <!--排班-->
+                    <div class="bd scheduling">
+                        <div class="inner">
+                            <div class="hdbar">第一步：选人</div>
+                            <div class="bdbar memberBox">
+                                <div class="memberTag">
+                                    阿凡提
+                                    <i class="del"></i>
+                                </div>
+                                <div class="memberTag">
+                                    阿凡提
+                                    <i class="del"></i>
+                                </div>
+                                <div class="memberTag">
+                                    阿凡提
+                                    <i class="del"></i>
+                                </div>
+                                <div class="memberTag">
+                                    阿凡提
+                                    <i class="del"></i>
+                                </div>
+                                <div class="memberTag">
+                                    阿凡提
+                                    <i class="del"></i>
+                                </div>
+                                <div class="memberTag">
+                                    阿凡提
+                                    <i class="del"></i>
+                                </div>
+                                <div class="memberTag">
+                                    阿凡提
+                                    <i class="del"></i>
+                                </div>
+                                <div class="memberTag">
+                                    阿凡提
+                                    <i class="del"></i>
+                                </div>
+                                <div class="memberTag">
+                                    阿凡提
+                                    <i class="del"></i>
+                                </div>
+                                <div class="memberTag">
+                                    阿凡提
+                                    <i class="del"></i>
+                                </div>
+                                <div class="memberTag">
+                                    阿凡提
+                                    <i class="del"></i>
+                                </div>
+                                <div class="memberTag">
+                                    阿凡提
+                                    <i class="del"></i>
+                                </div>
+                                <div class="memberTag">
+                                    阿凡提
+                                    <i class="del"></i>
+                                </div>
+                                <div class="memberTag">
+                                    阿凡提
+                                    <i class="del"></i>
+                                </div>
+                                <div class="memberTag">
+                                    阿凡提
+                                    <i class="del"></i>
+                                </div>
+                                <div class="memberTag">
+                                    阿凡提
+                                    <i class="del"></i>
+                                </div>
+                                <div><a class="btn2" href="javascript:;">选&nbsp;人</a></div>
+                            </div>
+                            <div class="hdbar">第二步：指定日期</div>
+                            <div class="bdbar dateSettingsBox cf">
+                                <div class="datePickerBox">
+	                                <div class="clearDatePicker">
+		                                <a class="btn2" href="javascript:;">清空已选日期</a>
+	                                </div>
+                                </div>
+                                <div class="dataSelector">
+                                    <div class="row">快速选择时间范围：</div>
+                                    <div class="row">从<input class="ipt datePicker_ipt" type="text" value="2013/03/03">到<input class="ipt datePicker_ipt" type="text" value="2013/03/03">
+                                    </div>
+                                    <div class="row">
+                                        <a class="btn2" href="javascript:;">确定范围内日期</a>
+                                    </div>
+                                    <div class="row">工作日：</div>
+                                    <div class="row">
+                                        <input type="radio"  id="" class="radio" name="wd"/>
+                                        <label class="label" for="">周一到周五</label>
+                                    </div>
+                                    <div class="row">
+                                        <input type="radio"  id="" class="radio" name="wd"/>
+                                        <label class="label" for="">周一到周五</label>
+                                    </div>
+                                    <div class="row">
+                                        <input type="radio"  id="" class="radio" name="wd"/>
+                                        <label class="label" for="">周一到周五</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hdbar">第二步：指定班次</div>
+                            <div class="bdbar">
+                                <div class="radioBox">
+                                    <input type="radio"  id="" class="radio"/>
+                                    <label for="">早上班次 5点到下午5点</label>
+                                </div>
+                                <div class="radioBox">
+                                    <input type="radio"  id="" class="radio"/>
+                                    <label for="">早上班次 5点到下午5点</label>
+                                </div>
+                                <div class="radioBox">
+                                    <input type="radio"  id="" class="radio"/>
+                                    <label for="">早上班次 5点到下午5点</label>
+                                </div>
+                                <div class="cf">
+                                    <a href="javascript:;" class="fr">添加管理班次</a>
+                                </div>
+                            </div>
+                            <div class="bdbar">
+                                <a class="btn" href="javascript:;">确&nbsp;&nbsp;定</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--排班 end-->
+
+                </div>
+                <!--班次管理 end-->
+                <!--管理员-->
+                <div class="box admin">
+                    <div class="inner">
+                        <div class="hdbar">指点管理员</div>
+                        <div class="bdbar memberBox">
+                            <div class="null">未指定管理员</div>
+                            <div class="memberTag">
+                                阿凡提
+                                <i class="del"></i>
+                            </div>
+                            <div class="memberTag">
+                                阿凡提
+                                <i class="del"></i>
+                            </div>
+                            <div class="memberTag">
+                                阿凡提
+                                <i class="del"></i>
+                            </div>
+                            <div class="memberTag">
+                                阿凡提
+                                <i class="del"></i>
+                            </div>
+                            <div class="memberTag">
+                                阿凡提
+                                <i class="del"></i>
+                            </div>
+                            <div class="memberTag">
+                                阿凡提
+                                <i class="del"></i>
+                            </div>
+                            <div class="memberTag">
+                                阿凡提
+                                <i class="del"></i>
+                            </div>
+                            <div class="memberTag">
+                                阿凡提
+                                <i class="del"></i>
+                            </div>
+                            <div class="memberTag">
+                                阿凡提
+                                <i class="del"></i>
+                            </div>
+                            <div class="memberTag">
+                                阿凡提
+                                <i class="del"></i>
+                            </div>
+                            <div class="memberTag">
+                                阿凡提
+                                <i class="del"></i>
+                            </div>
+                            <div class="memberTag">
+                                阿凡提
+                                <i class="del"></i>
+                            </div>
+                            <div class="memberTag">
+                                阿凡提
+                                <i class="del"></i>
+                            </div>
+                            <div class="memberTag">
+                                阿凡提
+                                <i class="del"></i>
+                            </div>
+                            <div class="memberTag">
+                                阿凡提
+                                <i class="del"></i>
+                            </div>
+                            <div class="memberTag">
+                                阿凡提
+                                <i class="del"></i>
+                            </div>
+                            <div><a class="btn2" href="javascript:;">选&nbsp;人</a></div>
+                        </div>
+                        <div class="bdbar">
+                            <a class="btn" href="javascript:;">确定</a>
+                        </div>
+                    </div>
+                </div>
+                <!--管理员 end-->
+
+                <!--部门下拉-->
+                <ul class="dropmenu departmentMenu" style="top:39px;left:281px;z-index: 9999;display: none;">
+	                <li class="dropmenu_li lv0 open">
+		                <a href="javascript:;"><i class="ico04"></i>所有部门</a>
+		                <ul class="submenu">
+			                <li class="dropmenu_li lv1"><a href="javascript:;">一级部门1</a></li>
+			                <li class="dropmenu_li lv1 open">
+				                <a href="javascript:;"><i class="ico04"></i>一级部门2</a>
+				                <ul class="submenu">
+					                <li class="dropmenu_li lv2 close">
+						                <a href="javascript:;"><i class="ico04"></i>二级部门2</a>
+						                <ul class="submenu">
+							                <li class="dropmenu_li lv3"><a href="javascript:;">三级部门22222222222222222</a></li>
+							                <li class="dropmenu_li lv3"><a href="javascript:;">三级部门2</a></li>
+						                </ul>
+					                </li>
+					                <li class="dropmenu_li lv2"><a href="javascript:;">二级部门2</a></li>
+				                </ul>
+			                </li>
+			                <li class="dropmenu_li lv1"><a href="javascript:;">一级部门3</a></li>
+		                </ul>
+	                </li>
+                </ul>
+                <!--部门下拉 end-->
+
+            </div>
+        </div>
+
+
+       <!--弹出提示框-->
+       <div class="oWindow  oWindow_current" style="top:50%; left:50%; margin:-92px 0 0 -199px;width:398px;height:184px;z-index: 592;display: none;">
+           <!-- 标题栏 高24px -->
+           <div class="oWindowTop" style="">
+               <div class="oWinBtnBarLeft locTopBarLeft" style="top: 2px; left: 0px; display: none;">
+                   <a href="javascript:;" class="oWinBtn oWinRecommend locSendRecommend" title="推荐"></a>
+                   <a href="javascript:;" class="oWinBtn oWinGuide locGuide" title="攻略"></a>
+               </div>
+               <div class="oWindowBtnBar">
+                   <a href="" class="oWinBtn oWinMin" title="最小化" style="display: none;"></a>
+                   <a href="" class="oWinBtn oWinClose" title="关闭"></a>
+               </div>
+               <div class="oWindowTitle">提示</div>
+           </div>
+
+           <!-- 工具栏 -->
+           <div class="oWinToolBar"></div>
+
+           <div class="oWindowBody">
+               <div class="oLoadingWrap loadingMask" style="display:none">
+                   <div class="oAppLoadingBox">
+                       <i class="oAppLoadingIco"></i>
+                       <i class="appLoadingProgress"></i>
+                   </div>
+               </div>
+
+               <div class="osWindowBodyContent">
+                   <div class="domainTip" style="top: 0px; left: 0px; width: 100%; height: 100%;">
+                       <div class="mdContent osMessageDialog">
+                           <div class="mdTxt">
+                               <i class="mdTxti mdico_warning"></i>
+                               <div class="mdTxtBox">
+                                   <div class="headLine mdTxtHead">确定删除班次吗?</div>
+                                   <br>
+                                   <div class="confirmMessage mdTxtCtn" style="display: none;">您确认继续发送吗？</div>
+                               </div>
+                           </div>
+                           <div class="mdBtnbox">
+                               <label class="mdCheck checkBtn" style="display: none;">
+                                   <input class="mdIpt checkBtnInput" type="checkbox">
+                                   <span class="mdCheckTxt">不再提示</span>
+                               </label>
+                               <button type="button" class="sBtn sendBtn okBtn">确 定</button>
+                               <button type="button" class="sBtn cancelBtn" style="display: none;">取消</button>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+       <!--弹出提示框 end-->
+
+        <!-- end -->
+    </div>
+</div>
+<script src="../js/jquery-1.4.4.min.js"></script>
+<script src="http://asset.gleasy.com/script/jquery/mousewheel/jquery.mousewheel.js?v=2013053101"></script>
+<script src="js/attendance.js"></script>
+</body>
+</html>
