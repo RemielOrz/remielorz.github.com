@@ -9,7 +9,7 @@ yum -y groupinstall xfce-4.4
 
 yum -y install curl firefox
 
-wget http://fpdownload.macromedia.com/get/flashplayer/pdc/11.2.202.236/install_flash_player_11_linux.x86_64.tar.gz
+wget http://fpdownload.macromedia.com/get/flashplayer/pdc/11.2.202.297/install_flash_player_11_linux.x86_64.tar.gz
 
 tar zxvf install_flash_player_11_linux.x86_64.tar.gz
 mkdir -p ~/.mozilla/plugins/
