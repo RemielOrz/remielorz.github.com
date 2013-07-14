@@ -38,3 +38,9 @@ update-rc.d firefox defaults 99
 
 
 wget http://vagex.com/vagex_add_on-1.6.1.xpi
+
+
+/etc/init.d/vncserver restart
+
+crontab -e
+
