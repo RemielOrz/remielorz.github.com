@@ -12,10 +12,8 @@ apt-get -y install curl firefox
 
 apt-get -y install  xfonts-intl-chinese xfonts-wqy ttf-wqy-zenhei ttf-wqy-microhei
 
-#wget http://fpdownload.macromedia.com/get/flashplayer/pdc/11.2.202.261/install_flash_player_11_linux.i386.tar.gz
-#wget http://fpdownload.macromedia.com/get/flashplayer/pdc/11.2.202.236/install_flash_player_11_linux.x86_64.tar.gz
 http://remielorz.github.com/install_flash_player_11_linux.x86_64.tar.gz
-#tar zxvf install_flash_player_11_linux.i386.tar.gz
+
 tar zxvf install_flash_player_11_linux.x86_64.tar.gz
 mkdir -p ~/.mozilla/plugins/
 cp libflashplayer.so ~/.mozilla/plugins/
@@ -38,7 +36,6 @@ update-rc.d firefox defaults 99
 
 
 wget http://vagex.com/vagex_add_on-1.6.1.xpi
-
 
 /etc/init.d/vncserver restart
 
