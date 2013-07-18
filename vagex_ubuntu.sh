@@ -13,7 +13,7 @@ apt-get -y install curl firefox
 
 apt-get -y install  xfonts-intl-chinese xfonts-wqy ttf-wqy-zenhei ttf-wqy-microhei
 
-http://remielorz.github.com/install_flash_player_11_linux.x86_64.tar.gz
+wget http://remielorz.github.com/install_flash_player_11_linux.x86_64.tar.gz
 
 tar zxvf install_flash_player_11_linux.x86_64.tar.gz
 mkdir -p ~/.mozilla/plugins/
