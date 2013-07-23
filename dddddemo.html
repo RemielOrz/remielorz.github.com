@@ -6,11 +6,14 @@
 	<style>
 
 	.demo{float: left;width:196px;background: #f6f6f6;height:58px;border-right:1px solid #000;}
-	.test{height:100px;clear: both;
+	.demo:before{content: "";height:100%;width:56px;background:pink;display: block;}
+	.test{height:100px;clear: both;border-top:1px solid #fff;
 		background-image: -webkit-repeating-linear-gradient(0deg,rgb(241, 241, 241) 0,rgb(241, 241, 241) 56px,rgb(246, 246, 246) 56px,rgb(246, 246, 246) 196px,rgb(0,0,0) 197px,rgb(0,0,0) 197px);
 		background-image: -moz-repeating-linear-gradient(0deg,rgb(241, 241, 241) 0,rgb(241, 241, 241) 56px,rgb(246, 246, 246) 56px,rgb(246, 246, 246) 196px,rgb(0,0,0) 197px,rgb(0,0,0) 197px);
 		background-image: -o-repeating-linear-gradient(0deg,rgb(241, 241, 241) 0,rgb(241, 241, 241) 56px,rgb(246, 246, 246) 56px,rgb(246, 246, 246) 196px,rgb(0,0,0) 197px,rgb(0,0,0) 197px);
 		background-image: repeating-linear-gradient(90deg,rgb(241, 241, 241) 0,rgb(241, 241, 241) 56px,rgb(246, 246, 246) 56px,rgb(246, 246, 246) 196px,rgb(0,0,0) 197px,rgb(0,0,0) 197px);}
+
+	.t{font-size:14px;font-weight:bold;background:yellow}
 	</style>
 </head>
 <body>
@@ -21,5 +24,10 @@
 	<div class="demo"></div>
 	<div class="demo"></div>
 	<div class="test"></div>
+
+	<div class="t">因为要涉及很多repeat, 所以不想用太多标签来做. 
+	<br>第一行是参考效果, 
+	<br>第二行是用css渐变...FF,IE10都OK, Chrome貌似渐变用px为单位定位不准?写了好几个效果都不对.求各位大神各位菊苣指点
+	<br>ps:随便写个渐变,用px做单位都可以看到chrome不准...</div>
 </body>
 </html>
