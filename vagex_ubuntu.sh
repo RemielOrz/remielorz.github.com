@@ -36,7 +36,7 @@ chmod 777 /etc/init.d/firefox
 update-rc.d firefox defaults 99
 
 
-wget http://vagex.com/vagex_add_on-1.6.1.xpi
+wget http://vagex.com/vagex_add_on-1.6.2.xpi
 
 pkill -9 vnc
 rm -rf /tmp/.X1*
