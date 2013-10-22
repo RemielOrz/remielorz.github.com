@@ -52,6 +52,7 @@
 
         typeof opts.callback == "function" && opts.callback.call(this);
 
+        return this;
     };
     $.fn.render_news.defaults = {
         data: [],

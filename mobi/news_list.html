@@ -12,29 +12,30 @@
 <script type="text/javascript" src="js/zepto.min.js"></script>
 <script type="text/javascript" src="js/news.js"></script>
 <script type="text/javascript">
+    $(function(){
+        var data = [
+            {
+                "date":"2013-09-27",
+                "title":"飞龙潭莲花盛开 游客欢喜赏花",
+                "info":"活动时间：从2013年9月7日至9月30日止",
+                "img":"style/images/news_thumb.jpg",
+                "alt":"飞龙潭莲花盛开 游客欢喜赏花",
+                "link":"news_detail.html"
+            },
+            {
+                "date":"2013-09-28",
+                "title":"飞龙潭莲花盛开 游客欢喜赏花 2",
+                "info":"活动时间：从2013年9月7日至9月30日止",
+                "img":"style/images/news_thumb.jpg",
+                "alt":"飞龙潭莲花盛开 游客欢喜赏花 2",
+                "link":"news_detail.html"
+            }
+        ];
 
-    var data = [
-        {
-            "date":"2013-09-27",
-            "title":"飞龙潭莲花盛开 游客欢喜赏花",
-            "info":"活动时间：从2013年9月7日至9月30日止",
-            "img":"style/images/news_thumb.jpg",
-            "alt":"飞龙潭莲花盛开 游客欢喜赏花",
-            "link":"news_detail.html"
-        },
-        {
-            "date":"2013-09-28",
-            "title":"飞龙潭莲花盛开 游客欢喜赏花 2",
-            "info":"活动时间：从2013年9月7日至9月30日止",
-            "img":"style/images/news_thumb.jpg",
-            "alt":"飞龙潭莲花盛开 游客欢喜赏花 2",
-            "link":"news_detail.html"
-        }
-    ];
-
-    $('#news_list').render_news({
-    	type:'list',
-    	data:data
+        $('#news_list').render_news({
+            type:'list',
+            data:data
+        });
     });
 </script>
 </body>
