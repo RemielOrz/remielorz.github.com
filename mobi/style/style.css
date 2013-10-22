@@ -1,0 +1,211 @@
+/*!
+ * Created with WebStorm.
+ * User: remiel
+ * Date: 13-10-22
+ * To change this template use File | Settings | File Templates.
+ */
+body {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+body {
+  background: #efefef;
+  font-size: 12px;
+  line-height: 1;
+}
+div {
+  box-sizing: border-box;
+}
+.banner {
+  width: 100%;
+  display: block;
+}
+.main_nav {
+  width: 576px;
+  margin: auto;
+  overflow: hidden;
+}
+.main_nav_item {
+  float: left;
+  margin: 80px 12px 0;
+  text-align: center;
+}
+.icon_box {
+  display: block;
+  margin: 1px 1px 30px;
+  width: 118px;
+  height: 118px;
+  background: -webkit-linear-gradient(#f7f7f7, #e3e3e3);
+  box-shadow: 0 -2px 0 rgba(255, 255, 255, 0.45) inset, 0 1px 3px rgba(0, 0, 0, 0.35);
+  position: relative;
+  border-radius: 36px;
+}
+.icon_box:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 9px;
+  right: 9px;
+  bottom: -50px;
+  height: 100px;
+  border-radius: 50px;
+  -webkit-transform: scaleY(0.1);
+  background: -webkit-radial-gradient(rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 0.15));
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.4) inset, 0 0 0 rgba(0, 0, 0, 0.2);
+}
+.icon_box:before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 65px;
+  background: url(images/icon_shadow_inset.png) no-repeat;
+}
+.icon_info {
+  text-shadow: 0 2px 0 #fff;
+  color: #000;
+  font-size: 28px;
+}
+.icon {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: url(images/icons.png) no-repeat 0 0;
+}
+.icon_01 {
+  background-position: -22px -23px;
+  width: 72px;
+  height: 72px;
+}
+.icon_02 {
+  background-position: -173px -27px;
+  width: 64px;
+  height: 64px;
+}
+.icon_03 {
+  background-position: -315px -22px;
+  width: 65px;
+  height: 74px;
+}
+.icon_04 {
+  background-position: -461px -28px;
+  width: 61px;
+  height: 61px;
+}
+.icon_05 {
+  background-position: -32px -279px;
+  width: 48px;
+  height: 64px;
+}
+.icon_06 {
+  background-position: -171px -281px;
+  width: 64px;
+  height: 64px;
+}
+.icon_07 {
+  background-position: -318px -282px;
+  width: 59px;
+  height: 59px;
+}
+.icon_08 {
+  background-position: -466px -280px;
+  width: 52px;
+  height: 60px;
+}
+#news_list {
+  color: #636363;
+  width: 100%;
+  padding: 12px 18px;
+}
+#news_list .news_date {
+  margin: 0 9px 14px;
+}
+#news_list .news_title {
+  margin: 0 3px 6px;
+}
+#news_list .news_info {
+  margin: 0 5px 9px;
+}
+.news_item,
+.news_detail_inner {
+  margin-bottom: 20px;
+  padding: 24px;
+  background: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.news_date {
+  font-size: 28px;
+}
+.news_title {
+  font-size: 36px;
+  line-height: 1.4;
+}
+.news_info {
+  font-size: 24px;
+  line-height: 1.3;
+}
+.news_thumb {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.news_bar {
+  font-size: 28px;
+  padding-top: 24px;
+  position: relative;
+}
+.news_bar:before {
+  content: '';
+  position: absolute;
+  left: -6px;
+  right: -6px;
+  top: 0px;
+  height: 2px;
+  background: #e8e8e8;
+}
+.news_link {
+  padding-left: 5px;
+  display: block;
+  height: 28px;
+  color: #636363;
+  position: relative;
+}
+.news_link:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 8px;
+  margin: auto;
+  height: 20px;
+  width: 14px;
+  background: url(images/ico_01.png) no-repeat;
+}
+#news_detail {
+  color: #636363;
+  width: 100%;
+  padding: 12px 18px;
+}
+#news_detail .news_info {
+  color: #007dff;
+}
+#news_detail .news_date {
+  color: #a6a6a6;
+  font-size: 24px;
+  margin: 13px 5px 24px;
+}
+#news_detail p {
+  text-indent: 2em;
+  line-height: 1.5;
+  font-size: 28px;
+}
