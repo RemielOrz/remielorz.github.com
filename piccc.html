@@ -1,0 +1,61 @@
+<html>
+<head>
+<script src="http://deepliquid.com/projects/Jcrop/js/jquery.min.js"></script>
+</head>
+<body>
+<input type="file" id="picture" name="picture" size="35" value="" onchange="setImg(this)"/>
+<div id="preview_fake" style="margin-left: 50px">
+</div>
+<img id="preview_size_fake"/>
+<style type="text/css">
+        #preview_fake{
+            /* 该对象用于在IE下显示预览图片
+            */
+            filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale);
+        }
+        #preview_size_fake{
+            /* 该对象只用来在IE下获得图片的原始尺寸，无其它用途
+            */
+            filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=image);
+            visibility:hidden;
+        }
+</style>
+<script type="text/javascript">
+    function setImg(obj){
+        if( !obj.value.match( /.jpg|.gif|.png|.bmp/i ) ){
+            alert('图片格式无效！');
+            return false;
+        }
+        $("#preview_fake").empty();
+        var img = document.createElement("img");
+        img.setAttribute("src", "");
+        img.setAttribute("id", "preview");
+        document.getElementById("preview_fake").appendChild(img);
+        if($.browser.msie){
+           if($.browser.version == 6.0){
+              $("#preview").attr("src",obj.value);
+           }else{
+              var objPreview = document.getElementById('preview' );
+              var objPreviewFake = document.getElementById('preview_fake' );
+              var objPreviewSizeFake = document.getElementById('preview_size_fake' );
+              obj.select();
+              var imgSrc =document.selection.createRange().text;
+              objPreviewFake.filters.item('DXImageTransform.Microsoft.AlphaImageLoader').src= imgSrc;
+              objPreviewSizeFake.filters.item('DXImageTransform.Microsoft.AlphaImageLoader').src= imgSrc;
+              autoSizePreview(objPreviewFake,objPreviewSizeFake.offsetWidth,objPreviewSizeFake.offsetHeight );
+              objPreview.style.display ='none';
+           }
+        }
+        if($.browser.mozilla){
+            $("#preview").attr("src",obj.files[0].getAsDataURL());
+        }
+        if($.browser.opera){
+            alert("暂时不支持Opera浏览器");
+        }
+        if($.browser.safari){
+            alert("暂时不支持Safari浏览器");
+        }
+    }
+</script>
+</body>
+</html>
