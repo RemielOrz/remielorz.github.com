@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+上证指数:<input type="text" id="i1"/><br>
+深证指数:<input type="text" id="i2"/><br>
+总人数:<input type="text" id="i3"/><br>
+<button id="btn">计 算</button>
+<br>
+上证指数*深证指数*10000 = <span id="r1"></span><br>
+倒序:<span id="r2"></span><br>
+除以总人数取余数:<span id="r3"></span><br>
+余数+1,得到中奖号码:<span id="r4"></span><br>
+
+
+<script type="text/javascript">
+    (function(doc){
+        var $i1 = id('i1')
+                ,$i2 = id('i2')
+                ,$i3 = id('i3')
+                ,$r1 = id('r1')
+                ,$r2 = id('r2')
+                ,$r3 = id('r3')
+                ,$r4 = id('r4')
+
+                ,$btn = id('btn');
+
+
+        $btn.addEventListener('click', function(){
+
+            var v1 = $i1.value * $i2.value * 10000
+                    ,v1_1 = parseInt(v1)
+                    ,v2 = v1_1.toString().split('').reverse().join('')
+                    ,v3 = v2*1%$i3.value;
+
+            $r1.innerHTML = v1_1;
+            $r2.innerHTML = v2;
+            $r3.innerHTML = v3;
+            $r4.innerHTML = v3+1;
+
+        });
+
+
+
+        function id(id){
+            return doc.getElementById(id);
+        }
+
+    })(document);
+</script>
+</body>
+</html>
