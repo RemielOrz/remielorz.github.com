@@ -152,6 +152,14 @@ html{ background:#262626;}
 .body{
     .inner{}
 }
+
+.header-01{
+    font-size:32/@px;
+    line-height:48/@px;
+    border-bottom:1px solid @red;
+    color:@red;
+}
+
 /*footer*/
 .footer{
     &,.inner{
@@ -164,6 +172,60 @@ html{ background:#262626;}
         font:14/@px Arial;
         color:#6c6c6c;
     }
+}
+
+
+/*ie*/
+
+.inner{
+    width:940/@px;
+    padding:0 10/@px;
+    margin:auto;
+}
+.logo{ left:4/@px;}
+.nav{
+    &__item{
+        float:left;
+    }
+}
+.icon-nav{ display:none;}
+
+.body{
+    overflow:hidden;
+    .inner{
+        width:630/@px;
+        padding-right:320/@px;
+        margin-top:24/@px;
+    }
+}
+
+.footer{}
+
+/*PC*/
+@media screen and (min-width: 641px) {
+    .inner{
+        width:940/@px;
+        padding:0 10/@px;
+        margin:auto;
+    }
+    .logo{ left:4/@px;}
+    .nav{
+        &__item{
+            float:left;
+        }
+    }
+    .icon-nav{ display:none;}
+
+    .body{
+        overflow:hidden;
+        .inner{
+            width:630/@px;
+            padding-right:320/@px;
+            margin-top:24/@px;
+        }
+    }
+
+    .footer{}
 }
 
 /*mobi*/
@@ -216,30 +278,4 @@ html{ background:#262626;}
         }
     }
 
-}
-/*PC*/
-@media screen and (min-width: 641px) {
-    .inner{
-        width:940/@px;
-        padding:0 10/@px;
-        margin:auto;
-    }
-    .logo{ left:4/@px;}
-    .nav{
-        &__item{
-            float:left;
-        }
-    }
-    .icon-nav{ display:none;}
-
-    .body{
-        overflow:hidden;
-        .inner{
-            width:630/@px;
-            padding-right:320/@px;
-            margin-top:24/@px;
-        }
-    }
-
-    .footer{}
 }
